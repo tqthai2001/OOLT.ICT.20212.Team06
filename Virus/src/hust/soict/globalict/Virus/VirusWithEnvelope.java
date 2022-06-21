@@ -1,20 +1,24 @@
 package hust.soict.globalict.Virus;
 
 import java.util.*;
+import javafx.scene.image.Image;
 
 public class VirusWithEnvelope extends Virus {
-	private String envelope;
+	private Element envelope;
 	
-	public VirusWithEnvelope(String name, String img, String acid_nucleic, String capsid, String[] symtoms, String envelope) {
-		super(name, img, acid_nucleic, capsid, symtoms);
+	public VirusWithEnvelope() {
+		super();
+		}
+	public VirusWithEnvelope(Element acid_nucleic, Element capsid, Element envelope, String[] symtoms, Image image_overview) {
+		super(acid_nucleic, capsid, symtoms, image_overview);
 		this.envelope = envelope;
 	}
-	public String getEnvelope() {
+	public Element getEnvelope() {
 		return envelope;
 	}
 	
 	public String displayDetail() {
-		String virus = getId() + " - " + getName() + " - " + getImg() +
+		String virus = getId() + " - " +
 				" - " + getAcid_nucleic() + " - " + getCapsid() +
 				" - Symtoms: " + getSymtoms() + " - " + getEnvelope();
 		return virus;

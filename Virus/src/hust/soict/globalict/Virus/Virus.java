@@ -1,27 +1,24 @@
 package hust.soict.globalict.Virus;
+
 import java.util.*;
+import javafx.scene.image.Image;
+
 public class Virus {
 	protected int id;
-	protected String name;
-	protected String img;
-	protected String acid_nucleic;
-	protected String capsid;
+	protected Element acid_nucleic;
+	protected Element capsid;
 	protected List<String> symtoms = new ArrayList<String>();
+	protected Image image_overview;
 	protected static int nbVirus = 0;
 	
 	public int getId() {
 		return id;
 	}
-	public String getName() {
-		return name;
-	}
-	public String getImg() {
-		return img;
-	}
-	public String getAcid_nucleic() {
+
+	public Element getAcid_nucleic() {
 		return acid_nucleic;
 	}
-	public String getCapsid() {
+	public Element getCapsid() {
 		return capsid;
 	}
 	public List<String> getSymtoms() {
@@ -30,25 +27,21 @@ public class Virus {
 	public static int getNbVirus() {
 		return nbVirus;
 	}
+	public Image getImage_overview() {
+		return image_overview;
+	}
 	
 	//Constructors
 	public Virus() {
 	}
-	public Virus(String name, String img, String acid_nucleic, String capsid, String[] symtoms) {
+	public Virus(Element acid_nucleic, Element capsid, String[] symtoms, Image image_overview) {
 		super();
 		this.id =  ++nbVirus;
-		this.name = name;
-		this.img = img;
 		this.acid_nucleic = acid_nucleic;
 		this.capsid = capsid;
 		this.symtoms = Arrays.asList(symtoms);
+		this.image_overview = image_overview;
 	}
-	public Virus(String name) {
-		super();
-		this.id =  ++nbVirus;
-		this.name = name;
-	}
-	
 	
 	//add symtom
 	public void addSymtom(String addedSymtom) {
@@ -69,9 +62,11 @@ public class Virus {
 	}
 	
 	public String displayDetail() {
-		String virus = getId() + " - " + getName() + " - " + getImg() +
+		String virus = getId() + " - " + 
 				" - " + getAcid_nucleic() + " - " + getCapsid() +
 				" - Symtoms: " + getSymtoms();
 		return virus;
 	}
+
+
 }
