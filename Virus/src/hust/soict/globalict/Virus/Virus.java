@@ -8,6 +8,7 @@ public class Virus {
 	protected Element acid_nucleic;
 	protected Element capsid;
 	protected List<String> symtoms = new ArrayList<String>();
+	protected String infectingMethod= new String();
 	protected Image image_overview;
 	protected static int nbVirus = 0;
 	
@@ -31,18 +32,22 @@ public class Virus {
 		return image_overview;
 	}
 	
-	//Constructors
-	public Virus() {
-	}
-	public Virus(Element acid_nucleic, Element capsid, String[] symtoms, Image image_overview) {
-		super();
-		this.id =  ++nbVirus;
-		this.acid_nucleic = acid_nucleic;
-		this.capsid = capsid;
-		this.symtoms = Arrays.asList(symtoms);
-		this.image_overview = image_overview;
+	public String getInfectingMethod() {
+		return infectingMethod;
 	}
 	
+
+	public Virus(int id, Element acid_nucleic, Element capsid, List<String> symtoms, String infectingMethod,
+			Image image_overview) {
+		super();
+		this.id = id;
+		this.acid_nucleic = acid_nucleic;
+		this.capsid = capsid;
+		this.symtoms = symtoms;
+		this.infectingMethod = infectingMethod;
+		this.image_overview = image_overview;
+	}
+
 	//add symtom
 	public void addSymtom(String addedSymtom) {
 		if(symtoms.contains(addedSymtom)) {

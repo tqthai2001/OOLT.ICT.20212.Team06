@@ -1,5 +1,7 @@
 package hust.soict.globalict.Virus;
 
+import java.util.List;
+
 import javafx.scene.image.Image;
 
 public class HIV extends VirusWithEnvelope {
@@ -15,11 +17,13 @@ public class HIV extends VirusWithEnvelope {
 	public Element getTat() {
 		return tat;
 	}
-
-	public HIV(Element acid_nucleic, Element capsid, Element envelope, String[] symtoms, Element protease, Element integrase, Element tat, Image image_overview) {
-		super(acid_nucleic, capsid, envelope, symtoms, image_overview);
+	public HIV(int id, Element acid_nucleic, Element capsid, List<String> symtoms, String infectingMethod,
+			Image image_overview, Element envelope, Element protease, Element integrease, Element tat) {
+		super(id, acid_nucleic, capsid, symtoms, infectingMethod, image_overview, envelope);
 		this.protease = protease;
-		this.integrease = integrase;
+		this.integrease = integrease;
 		this.tat = tat;
 	}
+
+	
 }
