@@ -37,15 +37,15 @@ public class Virus {
 	}
 	
 
-	public Virus(int id, Element acid_nucleic, Element capsid, List<String> symtoms, String infectingMethod,
+	public Virus(Element acid_nucleic, Element capsid, String[] symptoms, String infectingMethod,
 			Image image_overview) {
 		super();
-		this.id = id;
 		this.acid_nucleic = acid_nucleic;
 		this.capsid = capsid;
-		this.symtoms = symtoms;
+		this.symtoms = Arrays.asList(symptoms);
 		this.infectingMethod = infectingMethod;
 		this.image_overview = image_overview;
+		this.id = nbVirus++;
 	}
 
 	//add symtom

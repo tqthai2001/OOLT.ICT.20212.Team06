@@ -17,9 +17,9 @@ public class HIV extends VirusWithEnvelope {
 	public Element getTat() {
 		return tat;
 	}
-	public HIV(int id, Element acid_nucleic, Element capsid, List<String> symtoms, String infectingMethod,
+	public HIV(Element acid_nucleic, Element capsid, String[] symptoms, String infectingMethod,
 			Image image_overview, Element envelope, Element protease, Element integrease, Element tat) {
-		super(id, acid_nucleic, capsid, symtoms, infectingMethod, image_overview, envelope);
+		super( acid_nucleic, capsid, symptoms, infectingMethod, image_overview, envelope);
 		this.protease = protease;
 		this.integrease = integrease;
 		this.tat = tat;

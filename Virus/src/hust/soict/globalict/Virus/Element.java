@@ -12,9 +12,6 @@ public class Element {
 		return desc;
 	}
 	
-	//constructor
-	public Element(){
-	}
 	public Element(Image image, String desc) {
 		super();
 		this.image = image;
