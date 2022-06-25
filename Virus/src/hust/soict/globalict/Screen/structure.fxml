@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <VBox prefHeight="720.0" prefWidth="260.0" style="-fx-background-color: #333;">
+         <children>
+            <Pane prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <Label alignment="CENTER" layoutY="10.0" prefHeight="181.0" prefWidth="260.0" text="VIRUS" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font size="70.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Button fx:id="btViewStructure" mnemonicParsing="false" prefHeight="69.0" prefWidth="298.0" style="-fx-background-color: transparent;" text="Structure" textFill="WHITE" />
+            <Button fx:id="btViewInfecting" mnemonicParsing="false" prefHeight="69.0" prefWidth="298.0" style="-fx-background-color: transparent;" text="Infecting" textFill="WHITE" />
+            <Button fx:id="btBack" mnemonicParsing="false" prefHeight="69.0" prefWidth="298.0" style="-fx-background-color: transparent;" text="Back" textFill="WHITE" />
+         </children>
+      </VBox>
+      <AnchorPane fx:id="apVirusStructure" layoutX="260.0" layoutY="86.0" prefHeight="634.0" prefWidth="1022.0">
+         <children>
+            <Separator layoutY="504.0" prefHeight="9.0" prefWidth="1022.0" />
+            <TextArea fx:id="taDesc" layoutY="511.0" prefHeight="123.0" prefWidth="1022.0" />
+            <ImageView fx:id="imgStructure" fitHeight="508.0" fitWidth="1023.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true" />
+         </children>
+      </AnchorPane>
+      <HBox fx:id="hbElement" layoutX="618.0" layoutY="27.0" prefHeight="69.0" prefWidth="664.0" spacing="20.0">
+         <children>
+            <Button fx:id="btnOverview" mnemonicParsing="false" onAction="#btnOverviewPressed" text="Overview" />
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

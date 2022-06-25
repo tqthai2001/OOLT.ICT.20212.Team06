@@ -61,10 +61,8 @@ public class Virus {
 		}
 	}
 	
-	public String displayDetail() {
-		String virus = getId() + " - " + 
-				" - " + getAcid_nucleic() + " - " + getCapsid() +
-				" - Symtoms: " + getSymtoms();
+	public String getDetail() {
+		String virus = "Symtoms: " + getSymtoms()+  "\nInfecting Methods:";
 		return virus;
 	}
 
