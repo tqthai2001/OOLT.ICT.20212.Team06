@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hust.soict.globalict.Controller.VirusEnvelopeInfectingController">
+<AnchorPane xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <VBox prefHeight="720.0" prefWidth="260.0" style="-fx-background-color: #333;">
          <children>
@@ -27,35 +27,26 @@
             <Button mnemonicParsing="false" prefHeight="69.0" prefWidth="298.0" style="-fx-background-color: transparent;" text="Back" textFill="WHITE" />
          </children>
       </VBox>
-      <AnchorPane fx:id="apVirusNonEnvelopeInfection" layoutX="260.0" layoutY="61.0" prefHeight="659.0" prefWidth="1022.0">
+      <ImageView fx:id="cell" fitHeight="415.0" fitWidth="1052.0" layoutX="260.0" layoutY="305.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Assets/GeneralVirus/cell.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="cell1" fitHeight="415.0" fitWidth="1022.0" layoutX="260.0" layoutY="305.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Assets/GeneralVirus/cell_1.png" />
+         </image>
+      </ImageView>
+      <AnchorPane fx:id="apVirusEnvelopeInfection" layoutX="260.0" layoutY="57.0" prefHeight="659.0" prefWidth="1022.0">
          <children>
-            <ImageView fx:id="cell1" fitHeight="415.0" fitWidth="1052.0" layoutY="244.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../Assets/EnvelopeVirus/cell.png" />
-               </image>
-            </ImageView>
-            <ImageView fx:id="cell11" fitHeight="415.0" fitWidth="1022.0" layoutY="244.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../Assets/EnvelopeVirus/cell_1.png" />
-               </image>
-            </ImageView>
-         </children>
-      </AnchorPane>
-      <AnchorPane fx:id="apVirusEnvelopeInfection" layoutX="260.0" layoutY="61.0" prefHeight="659.0" prefWidth="1022.0">
-         <children>
-            <ImageView fx:id="cell" fitHeight="415.0" fitWidth="1052.0" layoutY="244.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../Assets/EnvelopeVirus/cell.png" />
-               </image>
-            </ImageView>
-            <ImageView fx:id="cell1" fitHeight="415.0" fitWidth="1022.0" layoutY="244.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../Assets/EnvelopeVirus/cell_1.png" />
-               </image>
-            </ImageView>
             <ImageView fx:id="virusEnvelopeOverview" fitHeight="145.0" fitWidth="132.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../Assets/EnvelopeVirus/envelopve_virus_overview.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="virusEnvelopeOnly" fitHeight="162.0" fitWidth="165.0" layoutX="429.0" layoutY="436.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Assets/EnvelopeVirus/envelopve_virus_overview_2.png" />
                </image>
             </ImageView>
             <ImageView fx:id="virusAndEnvelope" fitHeight="154.0" fitWidth="183.0" layoutX="431.0" layoutY="375.0" pickOnBounds="true" preserveRatio="true">
@@ -63,23 +54,53 @@
                   <Image url="@../Assets/EnvelopeVirus/virus_and_envelope.png" />
                </image>
             </ImageView>
-            <ImageView fx:id="virusEnvelopeKernel" fitHeight="61.0" fitWidth="61.0" layoutX="480.0" layoutY="495.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="virusEnvelopeKernel" fitHeight="53.0" fitWidth="63.0" layoutX="480.0" layoutY="493.0" pickOnBounds="true" preserveRatio="true" rotate="88.0">
                <image>
                   <Image url="@../Assets/EnvelopeVirus/envelopve_virus_overview_1.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="acidE" fitHeight="25.0" fitWidth="45.0" layoutX="739.0" layoutY="512.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Assets/GeneralVirus/acid_nucleic.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="apVirusNonEnvelopeInfection" layoutX="260.0" layoutY="55.0" prefHeight="659.0" prefWidth="1022.0">
+         <children>
+            <ImageView fx:id="virusNonEnvelopeAndEnvelope" fitHeight="181.0" fitWidth="194.0" layoutX="421.0" layoutY="372.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Assets/NonEnvelopeVirus/non_envelope_and_envelope.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="virusNonEnvelopeOverview" fitHeight="144.0" fitWidth="140.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Assets/NonEnvelopeVirus/non_envelope_virus_overview.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="virusNonEnvelopeKernel" fitHeight="80.0" fitWidth="92.0" layoutX="462.0" layoutY="510.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Assets/NonEnvelopeVirus/non_envelope_virus_overview.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="acidNonE" fitHeight="33.0" fitWidth="63.0" layoutX="476.0" layoutY="535.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Assets/GeneralVirus/acid_nucleic.png" />
                </image>
             </ImageView>
          </children>
       </AnchorPane>
       <Pane layoutX="804.0" prefHeight="69.0" prefWidth="477.0">
          <children>
-            <Button fx:id="btnStep1" layoutX="214.0" layoutY="22.0" mnemonicParsing="false" onAction="#btnStep1Pressed" text="Step 1" />
-            <Button fx:id="btnStep2" layoutX="264.0" layoutY="22.0" mnemonicParsing="false" onAction="#btnStep2Pressed" text="Step 2" />
-            <Button fx:id="btnStep3" layoutX="314.0" layoutY="22.0" mnemonicParsing="false" onAction="#btnStep3Pressed" text="Step 3" />
-            <Button fx:id="btnStep4" layoutX="364.0" layoutY="22.0" mnemonicParsing="false" onAction="#btnStep4Pressed" text="Step 4" />
+            <Button fx:id="btnStep1" layoutX="189.0" layoutY="22.0" mnemonicParsing="false" onAction="#btnStep1Pressed" text="Step 1" />
+            <Button fx:id="btnStep2" layoutX="239.0" layoutY="22.0" mnemonicParsing="false" onAction="#btnStep2Pressed" text="Step 2" />
+            <Button fx:id="btnStep3" layoutX="289.0" layoutY="22.0" mnemonicParsing="false" onAction="#btnStep3Pressed" text="Step 3" />
+            <Button fx:id="btnStep4" layoutX="339.0" layoutY="22.0" mnemonicParsing="false" onAction="#btnStep4Pressed" text="Step 4" />
+            <Button fx:id="btnStep5" layoutX="389.0" layoutY="22.0" mnemonicParsing="false" onAction="#btnStep5Pressed" text="Step 5" />
             <Button fx:id="btnReset" layoutX="100.0" layoutY="22.0" mnemonicParsing="false" onAction="#btnResetPressed" text="Reset" />
          </children>
       </Pane>
-      <Label fx:id="lbTypeOfVirus" alignment="CENTER" layoutX="260.0" prefHeight="69.0" prefWidth="447.0" textAlignment="CENTER">
+      <Label fx:id="lbTypeOfVirus" alignment="CENTER" layoutX="260.0" prefHeight="69.0" prefWidth="525.0" textAlignment="CENTER">
          <font>
             <Font name="System Bold Italic" size="30.0" />
          </font>
