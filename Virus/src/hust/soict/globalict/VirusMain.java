@@ -124,6 +124,86 @@ public class VirusMain {
 		
 		Herpes herpes = new Herpes(herpes_acid, herpes_capsid,new String[] {"Fever", "Swollen lymph nodes", "Body aches and pains", "Unusual tiredness", "Lack of appetite"}, herpes_infect, herpes_overview, herpes_envelope, herpes_tegument, herpes_gB, herpes_gC, herpes_gD, herpes_gHgL);
 		
+//Rota
+		String rota_infect = "Fecal-oral route";
+		
+		fis = new FileInputStream("/Rota/rota_acidnucleic.jpg");
+		Image rota_acid_img = new Image(fis);  
+		Element rota_acid = new Element(rota_acid_img, "Rotaviruses, like other non-enveloped, double-strand RNA viruses, package an RNA-dependent RNA polymerase (RdRp) with each duplex of their segmented genomes.");
+		
+		fis = new FileInputStream("/Assets/Rota/rota_capsid.jpeg");
+		Image rota_capsid_img = new Image(fis);  
+		Element rota_capsid = new Element(rota_capsid_img, "The rotavirus capsid consists of 11 segments and is contained in the viral core along with the minor structural proteins, VP1 and VP3");
+		
+		fis = new FileInputStream("/Assets/Rota/rota_vp1.png");
+		Image rota_vp1_img = new Image(fis);  
+		Element rota_vp1 = new Element(rota_vp1_img, "VP1 is active inside the double-layer particle, each VP1 achieves many rounds of mRNA transcription from its associated genome segment.");
+		
+		fis = new FileInputStream("/Assets/Rota/rota_vp3.png");
+		Image rota_vp3_img = new Image(fis);  
+		Element rota_vp3 = new Element(rota_vp3_img, "VP3 was necessary for “capping” the viral messenger RNA (mRNA), enabling it to mimic the host’s capped RNA and thus evade immune response.");
+		
+		fis = new FileInputStream("/Assets/Rota/rota_vp4.png");
+		Image rota_vp4_img = new Image(fis);  
+		Element rota_vp4 = new Element(rota_vp4_img, "VP4 spikes protein that constitute the outer capsid of a complete rotavirus particle have been shown to be independent neutralization antigens.");
+		
+		fis = new FileInputStream("/Assets/Rota/rota_overview.jpg");
+		Image rota_overview = new Image(fis);
+		
+		Rota rota = new Rota(rota_acid, rota_capsid, new String[] {"vomiting", "diarrhoea", "fever", "dry mouth"}, rota_infect, rota_overview, rota_vp1, rota_vp3, rota_vp4);
+		
+//Astro
+		String astro_infect = "Water, hand-touching, oral";
+		
+		fis = new FileInputStream("/Assets/Astro/astro_acid.png");
+		Image astro_acid_img = new Image(fis);  
+		Element astro_acid = new Element(astro_acid_img, "Astroviruses are positive-sense, single-stranded RNA viruses. Their genomes contain three open reading frames, but the exact number of encoded proteins remains unknown");
+		
+		fis = new FileInputStream("/Assets/Astro/astro_capsid.png");
+		Image astro_capsid_img = new Image(fis);  
+		Element astro_capsid = new Element(astro_capsid_img, "The Astrovirus capsid protein undergoes dramatic proteolytic processing both inside and outside of the host cell. It controls the initial phases of virus infection, including virus attachment, endocytosis, and genome release into the host cell. The astrovirus capsid is the target of host antibodies including virus-neutralizing antibodies.");
+		
+		fis = new FileInputStream("/Assets/Astro/astro_vp25-27.png");
+		Image astro_vp25_img = new Image(fis);  
+		Element astro_vp25 = new Element(astro_vp25_img, "The protein VP25 is released during trypsin activation of astrovirus infectivity. The virus can be equally infectious when carrying abundant amounts of VP25.");
+		
+		fis = new FileInputStream("/Assets/Astro/astro_vp25-27.png");
+		Image astro_vp27_img = new Image(fis);  
+		Element astro_vp27 = new Element(astro_vp27_img, "VP27 is a capsid spike protein of astroviruses that not only interacts with the host to define cell tropism and mediate cell entry, but also triggers the host immune response ");
+		
+		fis = new FileInputStream("/Assets/Astro/astro_overview.png");
+		Image astro_overview = new Image(fis);
+		
+		Astro astro = new Astro(astro_acid, astro_capsid, new String[] {"diarrhoea", "vomiting", "fever", "abdominal pain"}, astro_infect, astro_overview, astro_vp25, astro_vp27);
+		
+//Adeno
+		String adeno_infect = "Hand-touching, Body fluids, Air, Water, Oral";
+		
+		fis = new FileInputStream("/Assets/Adeno/adeno_acid.png");
+		Image adeno_acid_img = new Image(fis);  
+		Element adeno_acid = new Element(adeno_acid_img, "The adenoviral genomes are linear, non-segmented double-stranded DNA with sizes ranging from 26 kb to 45 kb in length, depending on the serotype");
+		
+		fis = new FileInputStream("/Assets/Adeno/adeno_capsid.png");
+		Image adeno_capsid_img = new Image(fis);  
+		Element adeno_capsid = new Element(adeno_capsid_img, "The capsid shell of an adenovirus comprises multiple copies of three major capsid proteins (MCPs; hexon, penton base, and fiber)");
+		
+		fis = new FileInputStream("/Assets/Adeno/adeno_penton.png");
+		Image adeno_penton_img = new Image(fis);  
+		Element adeno_penton = new Element(adeno_penton_img, "The adenovirus penton, a noncovalent complex of the pentameric penton base and trimeric fiber proteins, comprises the vertices of the adenovirus capsid and contains all necessary components for viral attachment and internalization");
+		
+		fis = new FileInputStream("/Assets/Adeno/adeno_fiber.jpg");
+		Image adeno_fiber_img = new Image(fis);  
+		Element adeno_fiber = new Element(adeno_fiber_img, "The fiber proteins of all human adenovirus serotypes share a common architecture: an N-terminal tail, a central shaft made of repeating sequences, and a C-terminal globular knob domain");
+		
+		fis = new FileInputStream("/Assets/Adeno/adeno_knob.jpg");
+		Image adeno_knob_img = new Image(fis);  
+		Element adeno_knob = new Element(adeno_knob_img, "The knob is the domain which interacts with the cellular receptor. the trimeric knob is the ligand for attachment to the adenovirus receptor.");
+		
+		fis = new FileInputStream("/Assets/Adeno/astro_overview.png");
+		Image adeno_overview = new Image(fis);
+		
+		Adeno adeno = new Adeno(adeno_acid, adeno_capsid, new String[] {"Runny nose", "Sore throat", "Fever", "Severe cough", "Headache", "Pink eye"}, adeno_infect, adeno_overview, adeno_penton, adeno_fiber, adeno_knob);
+		
 		}
 }
 
