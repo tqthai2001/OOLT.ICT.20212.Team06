@@ -10,7 +10,7 @@ public class Virus {
 	protected List<String> symtoms = new ArrayList<String>();
 	protected Image image_overview;
 	protected static int nbVirus = 0;
-	
+	protected ArrayList<Element> listOfElements = new ArrayList<Element>();
 	public int getId() {
 		return id;
 	}
@@ -30,6 +30,17 @@ public class Virus {
 	public Image getImage_overview() {
 		return image_overview;
 	}
+	public ArrayList<Element> getElements(){
+		return listOfElements;
+	}  
+//	public Element getElements(String element) {
+//        if (listOfElements.contains(element)) {
+//            return listOfElements.
+//        } else {
+//            return null;
+//        }
+//    }
+
 	
 	//Constructors
 	public Virus() {
@@ -41,30 +52,14 @@ public class Virus {
 		this.capsid = capsid;
 		this.symtoms = Arrays.asList(symtoms);
 		this.image_overview = image_overview;
-	}
-	
-	//add symtom
-	public void addSymtom(String addedSymtom) {
-		if(symtoms.contains(addedSymtom)) {
-			System.out.println("This symtom has already been in the list.");
-		}else {
-			symtoms.add(addedSymtom);
-		}
-	}
-	//remove symtom
-	public void removeSymtom(String addedSymtom) {
-		if(symtoms.contains(addedSymtom)) {
-			symtoms.remove(addedSymtom);
-			
-		}else {
-			System.out.println("This symtom has not been in the list.");
-		}
+		this.listOfElements.add(acid_nucleic);
+		this.listOfElements.add(capsid);
 	}
 	
 	public String getDetail() {
-		String virus = "Symtoms: " + getSymtoms()+  "\nInfecting Methods:";
+		String virus = "Symtoms: " + getSymtoms() +  "\nInfecting Methods:";
 		return virus;
 	}
 
-
+	
 }

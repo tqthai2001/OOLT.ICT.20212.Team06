@@ -12,6 +12,7 @@ public class VirusWithEnvelope extends Virus {
 	public VirusWithEnvelope(Element acid_nucleic, Element capsid, Element envelope, String[] symtoms, Image image_overview) {
 		super(acid_nucleic, capsid, symtoms, image_overview);
 		this.envelope = envelope;
+		this.listOfElements.add(envelope);
 	}
 	public Element getEnvelope() {
 		return envelope;

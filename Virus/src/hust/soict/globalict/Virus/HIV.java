@@ -24,5 +24,8 @@ public class HIV extends VirusWithEnvelope {
 		this.protease = protease;
 		this.integrease = integrase;
 		this.tat = tat;
+		this.listOfElements.add(integrase);
+		this.listOfElements.add(protease);
+		this.listOfElements.add(tat);
 	}
 }
