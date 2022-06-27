@@ -1,33 +1,75 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.ButtonBar?>
 <?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-
-<BorderPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/18">
-   <center>
-      <HBox prefHeight="720.0" prefWidth="1280.0" BorderPane.alignment="CENTER" />
-   </center>
+<BorderPane prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
    <top>
-      <TitledPane animated="false" prefWidth="1120.0" text="VIRUS APPLICATION HELP CENTER" BorderPane.alignment="CENTER">
-         <font>
-            <Font size="14.0" />
-         </font>
-      </TitledPane>
+      <TitledPane animated="false" text="VIRUS APP HELP CENTER" BorderPane.alignment="CENTER">
+         <content>
+            <AnchorPane prefHeight="200.0" prefWidth="1280.0">
+               <children>
+                  <Text fill="#511b81" layoutX="11.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ABOUT THIS APP">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Text>
+                  <Text fill="#511b81" layoutX="11.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="COVID-19 has been spreading all over the world and there is a need of understanding the different types of the virus, as well as the way they infect to have the basic knowledge to prevent them.">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Text>
+                  <Text fill="#511b81" layoutX="11.0" layoutY="88.0" strokeType="OUTSIDE" strokeWidth="0.0" text="This app was built for you to observe the significant characters of virus:">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Text>
+                  <Text fill="#511b81" layoutX="77.0" layoutY="117.0" strokeType="OUTSIDE" strokeWidth="0.0" text="+ The detail of viral structure">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Text>
+                  <Text fill="#511b81" layoutX="77.0" layoutY="137.0" strokeType="OUTSIDE" strokeWidth="0.0" text="+ The stages of viral infection">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Text>
+                  <Text fill="#511b81" layoutX="77.0" layoutY="157.0" strokeType="OUTSIDE" strokeWidth="0.0" text="+ The infecting method and the symptoms of viral deseases">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Text>
+                  <Text fill="#511b81" layoutX="14.0" layoutY="178.0" strokeType="OUTSIDE" strokeWidth="0.0" text="We hope that you can prevent yourself from virus and get a better health.">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Text>
+               </children>
+            </AnchorPane>
+         </content></TitledPane>
    </top>
    <bottom>
-      <ButtonBar prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
-        <buttons>
-          <Button mnemonicParsing="false" text="CLOSE" textFill="RED">
-               <font>
-                  <Font size="14.0" />
-               </font>
-            </Button>
-        </buttons>
-      </ButtonBar>
+      <HBox alignment="TOP_RIGHT" prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="40.0" prefWidth="130.0" text="CLOSE" textFill="#e41414" />
+         </children>
+      </HBox>
    </bottom>
+   <center>
+      <VBox prefWidth="1280.0" BorderPane.alignment="TOP_CENTER">
+         <children>
+            <Text fill="#511b81" strokeType="OUTSIDE" strokeWidth="0.0" text="1. Main menu">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Text>
+         </children>
+      </VBox>
+   </center>
 </BorderPane>
