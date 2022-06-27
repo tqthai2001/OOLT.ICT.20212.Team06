@@ -36,13 +36,13 @@
          <children>
             <Separator layoutY="504.0" prefHeight="9.0" prefWidth="1022.0" />
             <TextArea fx:id="taDesc" layoutY="511.0" prefHeight="123.0" prefWidth="1022.0" />
-            <ImageView fx:id="imgStructure" fitHeight="507.0" fitWidth="1022.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="imgStructure" fitHeight="508.0" fitWidth="1022.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true" />
+            <HBox fx:id="hbElement" layoutX="358.0" layoutY="-69.0" prefHeight="69.0" prefWidth="664.0" spacing="20.0">
+               <children>
+                  <Button fx:id="btnOverview" mnemonicParsing="false" onAction="#btnOverviewPressed" text="Overview" />
+               </children>
+            </HBox>
          </children>
       </AnchorPane>
-      <HBox fx:id="hbElement" layoutX="618.0" layoutY="27.0" prefHeight="69.0" prefWidth="664.0" spacing="20.0">
-         <children>
-            <Button fx:id="btnOverview" mnemonicParsing="false" onAction="#btnOverviewPressed" text="Overview" />
-         </children>
-      </HBox>
    </children>
 </AnchorPane>

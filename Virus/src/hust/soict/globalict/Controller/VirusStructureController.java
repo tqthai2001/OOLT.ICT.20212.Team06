@@ -19,7 +19,6 @@ import java.util.ResourceBundle;
 
 public class VirusStructureController implements Initializable{
 	protected Virus virus;
-	protected ArrayList<Button> btnElement = new ArrayList<Button>();
 	//construct
 	public VirusStructureController(Virus virus) {
 		super();

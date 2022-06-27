@@ -9,16 +9,8 @@ public class VirusWithoutEnvelope extends Virus {
 		super();
 	}
 	
-	public VirusWithoutEnvelope(Element acid_nucleic, Element capsid, String[] symtoms, Image image_overview) {
-		super(acid_nucleic, capsid, symtoms, image_overview);
+	public VirusWithoutEnvelope(Element acid_nucleic, Element capsid, String[] symtoms, String infectingMethod, Image image_overview) {
+		super(acid_nucleic, capsid, symtoms, infectingMethod, image_overview);
 	}
-	
-	public String displayDetail() {
-		String virus = getId() + " - " +
-				" - " + getAcid_nucleic() + " - " + getCapsid() +
-				" - Symtoms: " + getSymtoms();
-		return virus;
-	}
-
 	
 }

@@ -19,9 +19,9 @@ public class Covid19 extends VirusWithEnvelope{
 	public Element getSpike() {
 		return Spike;
 	}
-	public Covid19(Element acid_nucleic, Element capsid, String[] symptoms,
+	public Covid19(Element acid_nucleic, Element capsid, String[] symptoms, String infectingMethod,
 			Image image_overview, Element envelope, Element mprotein, Element eprotein, Element he, Element spike) {
-		super(acid_nucleic, capsid, envelope, symptoms, image_overview);
+		super(acid_nucleic, capsid, symptoms, infectingMethod, image_overview,  envelope);
 		this.Mprotein = mprotein;
 		this.Eprotein = eprotein;
 		this.he = he;
