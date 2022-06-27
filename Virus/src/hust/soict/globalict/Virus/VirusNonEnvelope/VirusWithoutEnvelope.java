@@ -8,7 +8,7 @@ public abstract class VirusWithoutEnvelope extends Virus {
 	public VirusWithoutEnvelope() {
 		super();
 	}
-	public VirusWithoutEnvelope(Element acid_nucleic, Element capsid, String[] symtoms, Image image_overview) {
-		super(acid_nucleic, capsid, symtoms, image_overview);
+	public VirusWithoutEnvelope(Element acidNucleic, Element capsid, String[] symptoms, String[] infectingMethod, Image imageOverview) {
+		super(acidNucleic, capsid, symptoms, infectingMethod, imageOverview);
 	}
 }

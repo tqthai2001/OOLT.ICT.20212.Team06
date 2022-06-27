@@ -10,20 +10,14 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.HBox;
 import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.scene.image.Image;
 
 import java.net.URL;
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
 import java.util.ResourceBundle;
 
 import javax.swing.JFrame;
 
-public class VirusStructureController extends VirusController implements Initializable{
-	private ArrayList<Button> btnElement = new ArrayList<Button>();
-
+public class VirusStructureController extends VirusController implements Initializable {
 	public VirusStructureController(Virus virus, JFrame jFrame) {
 		super(virus, jFrame);
     }
@@ -53,28 +47,49 @@ public class VirusStructureController extends VirusController implements Initial
 
     @FXML
     void btnOverviewPressed(ActionEvent event) {
-    	imgStructure.setImage(virus.getImage_overview());
+    	imgStructure.setImage(virus.getImageOverview());
         taDesc.setText(virus.getDetail());
     }
     
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
     	lbStructure.setText("Structure of " + virus.getClass().getSimpleName());
-    	imgStructure.setImage(virus.getImage_overview());
-    	imgStructure.setX(240);
+    	imgStructure.setImage(virus.getImageOverview());
+    	centerImage();
     	taDesc.setText(virus.getDetail());
-   // Iterator iterator = virus.getElements().iterator();
 	    for (Element element : virus.getElements()) {	
 	    	Button b = new Button(element.getName());
 	    	hbElement.getChildren().add(b);
 	    	b.setOnAction((ActionEvent)->{
 	    		imgStructure.setImage(element.getImage());
-	    		imgStructure.fitHeightProperty();
-	    		imgStructure.fitWidthProperty();
+	    		centerImage();
 	    		taDesc.setWrapText(true);
 	    	    taDesc.setText(element.getDesc());
 	        });
 	    }
 	    handleSideBar();
+    }
+    private void centerImage() {
+        Image img = imgStructure.getImage();
+        if (img != null) {
+            double w = 0;
+            double h = 0;
+
+            double ratioX = imgStructure.getFitWidth() / img.getWidth();
+            double ratioY = imgStructure.getFitHeight() / img.getHeight();
+
+            double reducCoeff = 0;
+            if (ratioX >= ratioY) {
+                reducCoeff = ratioY;
+            } else {
+                reducCoeff = ratioX;
+            }
+
+            w = img.getWidth() * reducCoeff;
+            h = img.getHeight() * reducCoeff;
+
+            imgStructure.setX((imgStructure.getFitWidth() - w) / 2);
+            imgStructure.setY((imgStructure.getFitHeight() - h) / 2);
+        }
     }
 }

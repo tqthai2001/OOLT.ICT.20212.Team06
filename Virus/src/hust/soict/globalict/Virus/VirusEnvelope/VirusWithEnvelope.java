@@ -10,8 +10,8 @@ public abstract class VirusWithEnvelope extends Virus {
 	public VirusWithEnvelope() {
 		super();
 	}
-	public VirusWithEnvelope(Element acid_nucleic, Element capsid, Element envelope, String[] symtoms, Image image_overview) {
-		super(acid_nucleic, capsid, symtoms, image_overview);
+	public VirusWithEnvelope(Element acidNucleic, Element capsid, Element envelope, String[] symptoms, String[] infectingMethod, Image imageOverview) {
+		super(acidNucleic, capsid, symptoms, infectingMethod, imageOverview);
 		this.envelope = envelope;
 		this.listOfElements.add(envelope);
 	}

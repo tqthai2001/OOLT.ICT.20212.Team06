@@ -25,9 +25,9 @@ public class Covid19 extends VirusWithEnvelope {
 		return this.getClass().getSimpleName();
 	}
 	
-	public Covid19(Element acid_nucleic, Element capsid, String[] symptoms,
-			Image image_overview, Element envelope, Element mprotein, Element eprotein, Element he, Element spike) {
-		super(acid_nucleic, capsid, envelope, symptoms, image_overview);
+	public Covid19(Element acidNucleic, Element capsid, String[] symptoms, String[] infectingMethod,
+			Image imageOverview, Element envelope, Element mprotein, Element eprotein, Element he, Element spike) {
+		super(acidNucleic, capsid, envelope, symptoms, infectingMethod, imageOverview);
 		this.Mprotein = mprotein;
 		this.Eprotein = eprotein;
 		this.he = he;
@@ -41,6 +41,6 @@ public class Covid19 extends VirusWithEnvelope {
 	@Override
 	public String getDetail() {
 		// TODO Auto-generated method stub
-		return "ID: " + getId() + " - Virus: " + getVirusName() + "\nSymtoms: " + getSymtoms();
+		return "ID: " + getId() + " - Virus: " + getVirusName() + "\nSymptoms: " + getSymptoms() + "\nInfecting Method: " + getInfectingMethod();
 	}
 }

@@ -9,30 +9,31 @@ import javafx.scene.image.Image;
 
 public class Virus implements InfectingHostCell {
 	private int id;
-	private Element acid_nucleic;
-	private Element capsid;
-	private List<String> symtoms = new ArrayList<String>();
-	private Image image_overview;
 	private static int nbVirus = 0;
+	private Element acidNucleic;
+	private Element capsid;
+	private List<String> symptoms = new ArrayList<String>();
+	private List<String> infectingMethod = new ArrayList<String>();
+	private Image imageOverview;
 	protected ArrayList<Element> listOfElements = new ArrayList<Element>();
 	private JFrame jFrame;
 	public int getId() {
 		return id;
 	}
-	public Element getAcid_nucleic() {
-		return acid_nucleic;
+	public Element getAcidNucleic() {
+		return acidNucleic;
 	}
 	public Element getCapsid() {
 		return capsid;
 	}
-	public List<String> getSymtoms() {
-		return symtoms;
+	public List<String> getSymptoms() {
+		return symptoms;
 	}
-	public static int getNbVirus() {
-		return nbVirus;
+	public List<String> getInfectingMethod() {
+		return infectingMethod;
 	}
-	public Image getImage_overview() {
-		return image_overview;
+	public Image getImageOverview() {
+		return imageOverview;
 	}
 	public ArrayList<Element> getElements() {
 		return listOfElements;
@@ -41,14 +42,15 @@ public class Virus implements InfectingHostCell {
 	public Virus() {
 		super();
 	}
-	public Virus(Element acid_nucleic, Element capsid, String[] symtoms, Image image_overview) {
+	public Virus(Element acidNucleic, Element capsid, String[] symptoms, String[] infectingMethod, Image imageOverview) {
 		super();
 		this.id =  ++nbVirus;
-		this.acid_nucleic = acid_nucleic;
+		this.acidNucleic = acidNucleic;
 		this.capsid = capsid;
-		this.symtoms = Arrays.asList(symtoms);
-		this.image_overview = image_overview;
-		this.listOfElements.add(acid_nucleic);
+		this.symptoms = Arrays.asList(symptoms);
+		this.infectingMethod = Arrays.asList(infectingMethod);
+		this.imageOverview = imageOverview;
+		this.listOfElements.add(acidNucleic);
 		this.listOfElements.add(capsid);
 	}
 	

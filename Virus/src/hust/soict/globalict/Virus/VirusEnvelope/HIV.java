@@ -21,8 +21,9 @@ public class HIV extends VirusWithEnvelope {
 		return this.getClass().getSimpleName();
 	}
 	
-	public HIV(Element acid_nucleic, Element capsid, String[] symtoms, Element envelope, Element protease, Element integrase, Element tat, Image image_overview) {
-		super(acid_nucleic, capsid, envelope, symtoms, image_overview);
+	public HIV(Element acidNucleic, Element capsid, String[] symptoms, String[] infectingMethod,
+			Element envelope, Element protease, Element integrase, Element tat, Image imageOverview) {
+		super(acidNucleic, capsid, envelope, symptoms, infectingMethod, imageOverview);
 		this.protease = protease;
 		this.integrease = integrase;
 		this.tat = tat;
@@ -34,6 +35,6 @@ public class HIV extends VirusWithEnvelope {
 	@Override
 	public String getDetail() {
 		// TODO Auto-generated method stub
-		return "ID: " + getId() + " - Virus: " + getVirusName() + "\nSymtoms: " + getSymtoms();
+		return "ID: " + getId() + " - Virus: " + getVirusName() + "\nSymptoms: " + getSymptoms() + "\nInfecting Method: " + getInfectingMethod();
 	}
 }
