@@ -17,6 +17,7 @@ public class Element {
 	}
 	//constructor
 	public Element(){
+		super();
 	}
 	public Element(String name, Image image, String desc) {
 		super();

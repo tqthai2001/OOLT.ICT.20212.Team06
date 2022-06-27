@@ -3,9 +3,11 @@ package hust.soict.globalict.Controller;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+import javax.swing.JFrame;
+
 import hust.soict.globalict.Virus.Virus;
-import hust.soict.globalict.Virus.VirusWithEnvelope;
-import hust.soict.globalict.Virus.VirusWithoutEnvelope;
+import hust.soict.globalict.Virus.VirusEnvelope.VirusWithEnvelope;
+import hust.soict.globalict.Virus.VirusNonEnvelope.VirusWithoutEnvelope;
 import javafx.animation.KeyFrame;
 import javafx.animation.KeyValue;
 import javafx.animation.ScaleTransition;
@@ -21,30 +23,35 @@ import javafx.scene.layout.AnchorPane;
 import javafx.util.Duration;
 
 public class VirusInfectingController extends VirusController implements Initializable {
-	private Virus virus;
 	private ImageView virusOverview, virusCovered, virusKernel, acid;
 	@FXML
-    protected Button btnStep1, btnStep2, btnStep3, btnStep4, btnStep5, btnReset;
+    private Button btnStep1, btnStep2, btnStep3, btnStep4, btnStep5, btnReset;
 	@FXML
     private ImageView virusEnvelopeKernel, virusNonEnvelopeKernel, virusEnvelopeOverview, virusNonEnvelopeOverview, virusEnvelopeOnly,
     					virusAndEnvelope, virusNonEnvelopeAndEnvelope, cell, cell1, acidNonE, acidE;
 	@FXML
     private AnchorPane apVirusEnvelopeInfection, apVirusNonEnvelopeInfection;
 	@FXML
-    protected Label lbTypeOfVirus;
-	
-	public VirusInfectingController(Virus virus) {
-		super();
-		this.virus = virus;
+    private Label lbTypeOfVirus;
+
+	public VirusInfectingController(Virus virus, JFrame jFrame) {
+		super(virus, jFrame);
+		// TODO Auto-generated constructor stub
 	}
+
+	public VirusInfectingController(Button btViewInfecting, Button btViewStructure, Button btBack) {
+		super(btViewInfecting, btViewStructure, btBack);
+		// TODO Auto-generated constructor stub
+	}
+
 
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		// TODO Auto-generated method stub
 		cell1.setOpacity(0);
 		virusEnvelopeOnly.setOpacity(0);
+		lbTypeOfVirus.setText("Infection of " + virus.getClass().getSimpleName());
 		if (virus instanceof VirusWithEnvelope) {
-			lbTypeOfVirus.setText("Infection of Envelope Virus");
 			apVirusEnvelopeInfection.setVisible(true);
 			apVirusNonEnvelopeInfection.setVisible(false);
 			virusOverview = virusEnvelopeOverview;
@@ -53,7 +60,6 @@ public class VirusInfectingController extends VirusController implements Initial
 			acid = acidE;
 		}
 		else if (virus instanceof VirusWithoutEnvelope) {
-			lbTypeOfVirus.setText("Infection of Non Envelope Virus");
 			apVirusEnvelopeInfection.setVisible(false);
 			apVirusNonEnvelopeInfection.setVisible(true);
 			virusOverview = virusNonEnvelopeOverview;
@@ -64,6 +70,7 @@ public class VirusInfectingController extends VirusController implements Initial
 		virusKernel.setOpacity(0);
 		virusCovered.setOpacity(0);
 		acid.setOpacity(0);
+		handleSideBar();
 	}
 	
 	@FXML
