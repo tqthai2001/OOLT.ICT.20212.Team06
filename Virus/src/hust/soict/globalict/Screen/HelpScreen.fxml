@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TitledPane?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
@@ -30,7 +31,7 @@
                         <Font size="15.0" />
                      </font>
                   </Text>
-                  <Text fill="#511b81" layoutX="77.0" layoutY="117.0" strokeType="OUTSIDE" strokeWidth="0.0" text="+ The detail of viral structure">
+                  <Text fill="#511b81" layoutX="77.0" layoutY="117.0" strokeType="OUTSIDE" strokeWidth="0.0" text="+ The detail of viral structures">
                      <font>
                         <Font size="15.0" />
                      </font>
@@ -64,11 +65,11 @@
    <center>
       <VBox prefWidth="1280.0" BorderPane.alignment="TOP_CENTER">
          <children>
-            <Text fill="#511b81" strokeType="OUTSIDE" strokeWidth="0.0" text="1. Main menu">
+            <TextArea prefHeight="410.0" prefWidth="1280.0" text="When we starts the applications, we will see the first scene “Main Menu”:&#10;1.&#9;The name of program.&#10;2.&#9;Guideline for choosing button.&#10;3.&#9;Button “Virus with envelope”: we click this button if we want to observe the enveloped virus which includes 3 species (3 buttons)&#10;•&#9;COVID-19&#10;•&#9;HIV&#10;•&#9;Herpes Virus&#10;4.&#9;Button “Virus without envelope”: we click this button if we want to observe the non-enveloped virus which contains 3 types (3 buttons)&#10;•&#9;Rota Virus&#10;•&#9;Astro Virus&#10;•&#9;Adeno Virus&#10;5.&#9;The menu bar include:&#10;•&#9;File/Close: To exit the application, it will show an message for you to comfirm if you really want to exit.&#10;•&#9;Help/About: This will illustrate the purpose of this application and how to use it easily.&#10;After choosing the Virus button, the app shows the details of viral structure, the infection stages, the symptoms and the infection method for each virus species.&#10;For every infection stages, we can browse backward/forward freely as we want.&#10;We can also click File/Go Back to come back to previous scene screen.&#10;">
                <font>
                   <Font size="15.0" />
                </font>
-            </Text>
+            </TextArea>
          </children>
       </VBox>
    </center>
