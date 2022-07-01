@@ -97,7 +97,7 @@ public class MainScreenController implements Initializable{
     void quitBtn(ActionEvent event) {
     	Alert alert = new Alert(AlertType.CONFIRMATION);
     	alert.setTitle("Exit");
-    	alert.setHeaderText("Application closing");
+    	alert.setHeaderText("Application Closing");
     	alert.setContentText("Do you want to quit?");
     	
     	if (alert.showAndWait().get() == ButtonType.OK){

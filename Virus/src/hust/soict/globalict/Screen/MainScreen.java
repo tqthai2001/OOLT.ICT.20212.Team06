@@ -18,8 +18,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 
-
-public class MainScreen extends JFrame{
+public class MainScreen extends JFrame {
 	protected HIV hiv;
 	protected Covid19 covid;
 	protected Herpes herpes;
@@ -36,13 +35,13 @@ public class MainScreen extends JFrame{
 		this.rota = rota;
 		this.astro = astro;
 		this.adeno = adeno;
-		//this.jFrame = jFrame;
 		MainScreen mainScreen = this;
 		JFXPanel fxPanel = new JFXPanel();
 		this.add(fxPanel);
 		this.setTitle("Virus Main Menu");
 		this.setSize(1298, 720);
 		this.setVisible(true);
+		this.setLocationRelativeTo(null);
 		
 		Platform.runLater(new Runnable() {
 			@Override

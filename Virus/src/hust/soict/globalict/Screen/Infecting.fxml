@@ -42,12 +42,12 @@
          <children>
             <ImageView fx:id="virusEnvelopeOverview" fitHeight="145.0" fitWidth="132.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../Assets/EnvelopeVirus/envelopve_virus_overview.png" />
+                  <Image url="@../Assets/EnvelopeVirus/overview.png" />
                </image>
             </ImageView>
             <ImageView fx:id="virusEnvelopeOnly" fitHeight="162.0" fitWidth="165.0" layoutX="429.0" layoutY="436.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../Assets/EnvelopeVirus/envelopve_virus_overview_2.png" />
+                  <Image url="@../Assets/EnvelopeVirus/envelope.png" />
                </image>
             </ImageView>
             <ImageView fx:id="virusAndEnvelope" fitHeight="154.0" fitWidth="183.0" layoutX="431.0" layoutY="375.0" pickOnBounds="true" preserveRatio="true">
@@ -57,7 +57,7 @@
             </ImageView>
             <ImageView fx:id="virusEnvelopeKernel" fitHeight="53.0" fitWidth="63.0" layoutX="480.0" layoutY="493.0" pickOnBounds="true" preserveRatio="true" rotate="88.0">
                <image>
-                  <Image url="@../Assets/EnvelopeVirus/envelopve_virus_overview_1.png" />
+                  <Image url="@../Assets/EnvelopeVirus/capsid.png" />
                </image>
             </ImageView>
             <ImageView fx:id="acidE" fitHeight="25.0" fitWidth="45.0" layoutX="739.0" layoutY="512.0" pickOnBounds="true" preserveRatio="true">
@@ -71,17 +71,17 @@
          <children>
             <ImageView fx:id="virusNonEnvelopeAndEnvelope" fitHeight="181.0" fitWidth="194.0" layoutX="421.0" layoutY="372.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../Assets/NonEnvelopeVirus/non_envelope_and_envelope.png" />
+                  <Image url="@../Assets/NonEnvelopeVirus/covered.png" />
                </image>
             </ImageView>
             <ImageView fx:id="virusNonEnvelopeOverview" fitHeight="144.0" fitWidth="140.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../Assets/NonEnvelopeVirus/non_envelope_virus_overview.png" />
+                  <Image url="@../Assets/NonEnvelopeVirus/overview.png" />
                </image>
             </ImageView>
             <ImageView fx:id="virusNonEnvelopeKernel" fitHeight="80.0" fitWidth="92.0" layoutX="462.0" layoutY="510.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../Assets/NonEnvelopeVirus/non_envelope_virus_overview.png" />
+                  <Image url="@../Assets/NonEnvelopeVirus/overview.png" />
                </image>
             </ImageView>
             <ImageView fx:id="acidNonE" fitHeight="33.0" fitWidth="63.0" layoutX="476.0" layoutY="535.0" pickOnBounds="true" preserveRatio="true">
