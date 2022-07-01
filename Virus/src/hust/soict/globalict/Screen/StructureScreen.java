@@ -24,6 +24,7 @@ public class StructureScreen extends JFrame {
 		this.setTitle("Virus Structure");
 		this.setSize(1298, 720);
 		this.setVisible(true);
+		this.setLocationRelativeTo(null);
 		
 		Platform.runLater(new Runnable() {
 			@Override
