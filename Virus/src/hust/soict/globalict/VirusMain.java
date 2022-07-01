@@ -1,5 +1,6 @@
 package hust.soict.globalict;
 
+import hust.soict.globalict.Screen.MainScreen;
 import hust.soict.globalict.Virus.*;
 import hust.soict.globalict.Virus.VirusEnvelope.Covid19;
 import hust.soict.globalict.Virus.VirusEnvelope.HIV;
@@ -63,7 +64,7 @@ public class VirusMain {
 		
 		input = new FileInputStream("src/hust/soict/globalict/Assets/Covid19/covid19_eprotein.jpg");
 		Image covid_eprotein_img = new Image(input);  
-		Element covid_eprotein = new Element("Eprotein", covid_eprotein_img, "E-protein is a small integral membrane protein, which together with Matrix/Membrane (M) and Spike(S) proteins, constitute coronaviruses� interface to the external environment");
+		Element covid_eprotein = new Element("Eprotein", covid_eprotein_img, "E-protein is a small integral membrane protein, which together with Matrix/Membrane (M) and Spike(S) proteins, constitute coronavirusesï¿½ interface to the external environment");
 		
 		input = new FileInputStream("src/hust/soict/globalict/Assets/Covid19/covid19_Mprotein.jpg");
 		Image covid_Mprotein_img = new Image(input);  
@@ -141,7 +142,7 @@ public class VirusMain {
 
 		input = new FileInputStream("src/hust/soict/globalict/Assets/Rota/rota_vp3.png");
 		Image rota_vp3_img = new Image(input);  
-		Element rota_vp3 = new Element("Vp3", rota_vp3_img, "VP3 was necessary for “capping” the viral messenger RNA (mRNA), enabling it to mimic the host’s capped RNA and thus evade immune response");
+		Element rota_vp3 = new Element("Vp3", rota_vp3_img, "VP3 was necessary for â€œcappingâ€� the viral messenger RNA (mRNA), enabling it to mimic the hostâ€™s capped RNA and thus evade immune response");
 
 		input = new FileInputStream("src/hust/soict/globalict/Assets/Rota/rota_vp4.png");
 		Image rota_vp4_img = new Image(input);  
@@ -210,12 +211,8 @@ public class VirusMain {
 		Adeno adeno = new Adeno(adeno_acid, adeno_capsid, adeno_symptoms, adeno_infect, adeno_overview, adeno_penton, adeno_fiber, adeno_knob);
 		
 //		------------------------------ END INIT DATA ------------------------------
-		hiv.infecting();
-		covid.infecting();
-		herpes.infecting();
-		rota.infecting();
-		adeno.infecting();
-		astro.infecting();
+	
+		new MainScreen(hiv, covid, herpes, rota, astro, adeno);
 	}
 }
 

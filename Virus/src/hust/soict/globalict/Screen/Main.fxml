@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Pane prefHeight="160.0" prefWidth="1280.0" style="-fx-background-color: #333;">
+         <children>
+            <Label alignment="CENTER" layoutX="510.0" layoutY="-10.0" prefHeight="181.0" prefWidth="260.0" text="VIRUS" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="70.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Button fx:id="virusWithEnvelopeBtn" alignment="CENTER" layoutX="350.0" layoutY="273.0" mnemonicParsing="false" onAction="#virusWithEnvelopeBtnPressed" prefHeight="80.0" prefWidth="250.0" text="Virus With Envelope" />
+      <Button fx:id="virusWithoutEnvelopeBtn" alignment="CENTER" layoutX="674.0" layoutY="273.0" mnemonicParsing="false" onAction="#virusWithoutEnvelopeBtnPressed" prefHeight="80.0" prefWidth="250.0" text="Virus Without Envelope" />
+      <Button fx:id="helpBtn" alignment="CENTER" layoutX="565.0" layoutY="397.0" mnemonicParsing="false" onAction="#helpBtnPressed" prefHeight="80.0" prefWidth="150.0" text="Help " textAlignment="CENTER" />
+      <Button fx:id="quitBtn" layoutX="565.0" layoutY="527.0" mnemonicParsing="false" onAction="#quitBtn" prefHeight="80.0" prefWidth="150.0" text="Quit" />
+      <Button fx:id="hivBtn" layoutX="306.0" layoutY="273.0" mnemonicParsing="false" onAction="#hivBtnPressed" prefHeight="80.0" prefWidth="150.0" text="HIV" />
+      <Button fx:id="covid19Btn" layoutX="565.0" layoutY="273.0" mnemonicParsing="false" onAction="#covid19Btn" prefHeight="80.0" prefWidth="150.0" text="Covid19" />
+      <Button fx:id="herpesBtn" layoutX="811.0" layoutY="273.0" mnemonicParsing="false" onAction="#herpesBtn" prefHeight="80.0" prefWidth="150.0" text="Herpes" />
+      <Button fx:id="rotaBtn" layoutX="306.0" layoutY="273.0" mnemonicParsing="false" onAction="#rotaBtn" prefHeight="80.0" prefWidth="150.0" text="Roto" />
+      <Button fx:id="astroBtn" layoutX="565.0" layoutY="273.0" mnemonicParsing="false" onAction="#astroBtn" prefHeight="80.0" prefWidth="150.0" text="Astro" />
+      <Button fx:id="adenoBtn" layoutX="811.0" layoutY="273.0" mnemonicParsing="false" onAction="#adenoBtn" prefHeight="80.0" prefWidth="150.0" text="Adeno" />
+      <Button fx:id="returnBtn" layoutX="80.0" layoutY="196.0" mnemonicParsing="false" onAction="#returnBtnPressed" text="Return" />
+   </children>
+</AnchorPane>
