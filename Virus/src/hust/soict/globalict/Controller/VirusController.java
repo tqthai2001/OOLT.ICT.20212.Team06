@@ -6,15 +6,8 @@ import javax.swing.JFrame;
 
 import hust.soict.globalict.Screen.InfectingDetailScreen;
 import hust.soict.globalict.Screen.InfectingScreen;
-import hust.soict.globalict.Screen.MainScreen;
 import hust.soict.globalict.Screen.StructureScreen;
 import hust.soict.globalict.Virus.Virus;
-import hust.soict.globalict.Virus.VirusEnvelope.Covid19;
-import hust.soict.globalict.Virus.VirusEnvelope.HIV;
-import hust.soict.globalict.Virus.VirusEnvelope.Herpes;
-import hust.soict.globalict.Virus.VirusNonEnvelope.Adeno;
-import hust.soict.globalict.Virus.VirusNonEnvelope.Astro;
-import hust.soict.globalict.Virus.VirusNonEnvelope.Rota;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 
