@@ -15,7 +15,7 @@ import javafx.scene.Scene;
 public class StructureScreen extends JFrame {
 	private Virus virus;
 
-	public StructureScreen(Virus virus) throws HeadlessException {
+	public StructureScreen(Virus virus, JFrame jFrame) throws HeadlessException {
 		super();
 		this.virus = virus;
 		StructureScreen structureScreen = this;

@@ -1,14 +1,20 @@
 package hust.soict.globalict.Virus.VirusNonEnvelope;
 
-import hust.soict.globalict.Virus.Element;
+import java.util.List;
+
 import hust.soict.globalict.Virus.Virus;
+import hust.soict.globalict.Virus.Element.AcidNucleic;
+import hust.soict.globalict.Virus.Element.Capsid;
 import javafx.scene.image.Image;
 
-public abstract class VirusWithoutEnvelope extends Virus {
+public class VirusWithoutEnvelope extends Virus {
 	public VirusWithoutEnvelope() {
 		super();
 	}
-	public VirusWithoutEnvelope(Element acidNucleic, Element capsid, String[] symptoms, String[] infectingMethod, Image imageOverview) {
-		super(acidNucleic, capsid, symptoms, infectingMethod, imageOverview);
+
+	public VirusWithoutEnvelope(List<String> symptoms, List<String> infectingMethod, Image imageOverview,
+			AcidNucleic acidNucleic, Capsid capsid) {
+		super(symptoms, infectingMethod, imageOverview, acidNucleic, capsid);
+		// TODO Auto-generated constructor stub
 	}
 }

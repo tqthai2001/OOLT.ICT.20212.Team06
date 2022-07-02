@@ -1,46 +1,48 @@
 package hust.soict.globalict.Virus.VirusEnvelope;
 
-import hust.soict.globalict.Virus.Element;
+import java.util.List;
+
+import hust.soict.globalict.Virus.Element.AcidNucleic;
+import hust.soict.globalict.Virus.Element.Capsid;
+import hust.soict.globalict.Virus.Element.OtherElement;
 import javafx.scene.image.Image;
 
 public class Herpes extends VirusWithEnvelope {
-	private Element tegument;
-	private Element gB;
-	private Element gC;
-	private Element gD;
-	private Element gHgL;
+	private OtherElement tegument;
+	private OtherElement gB;
+	private OtherElement gC;
+	private OtherElement gD;
+	private OtherElement gHgL;
 	
-	public Element getTegument() {
+	public OtherElement getTegument() {
 		return tegument;
 	}
-	public Element getgB() {
+	public OtherElement getgB() {
 		return gB;
 	}
-	public Element getgC() {
+	public OtherElement getgC() {
 		return gC;
 	}
-	public Element getgD() {
+	public OtherElement getgD() {
 		return gD;
 	}
-	public Element getgHgL() {
+	public OtherElement getgHgL() {
 		return gHgL;
 	}
 	public String getVirusName() {
 		return this.getClass().getSimpleName();
 	}
 	
-	public Herpes(Element acidNucleic, Element capsid, Element envelope, String[] symptoms, String[] infectingMethod,
-			Image imageOverview, Element tegument, Element gB, Element gC, Element gD, Element gHgL) {
-		super(acidNucleic, capsid, envelope, symptoms, infectingMethod, imageOverview);
+	public Herpes(List<String> symptoms, List<String> infectingMethod, Image imageOverview, AcidNucleic acidNucleic,
+			Capsid capsid, String envelopeDesc, Image envelopeImage, OtherElement tegument, OtherElement gB,
+			OtherElement gC, OtherElement gD, OtherElement gHgL) {
+		super(symptoms, infectingMethod, imageOverview, acidNucleic, capsid, envelopeDesc, envelopeImage);
 		this.tegument = tegument;
 		this.gB = gB;
 		this.gC = gC;
 		this.gD = gD;
 		this.gHgL = gHgL;
-		this.listOfElements.add(tegument);
-		this.listOfElements.add(gB);
-		this.listOfElements.add(gC);
-		this.listOfElements.add(gHgL);
+		this.addElement(tegument, gB, gC, gD, gHgL);
 	}
 	
 	@Override

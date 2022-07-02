@@ -2,9 +2,8 @@ package hust.soict.globalict.Controller;
 
 import java.net.URL;
 import java.util.ResourceBundle;
-
 import javax.swing.JFrame;
-
+import hust.soict.globalict.Screen.StructureScreen;
 import hust.soict.globalict.Virus.VirusEnvelope.*;
 import hust.soict.globalict.Virus.VirusNonEnvelope.*;
 import javafx.event.ActionEvent;
@@ -16,57 +15,27 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ButtonType;
 
 public class MainScreenController implements Initializable{
-	protected HIV hiv;
-	protected Covid19 covid;
-	protected Herpes herpes;
-	protected Rota rota;
-	protected Astro astro;
-	protected Adeno adeno;
-	//protected JFrame jFrame;
+	private HIV hiv;
+	private Covid19 covid;
+	private Herpes herpes;
+	private Rota rota;
+	private Astro astro;
+	private Adeno adeno;
+	private JFrame jFrame;
 
-	public MainScreenController(HIV hiv, Covid19 covid, Herpes herpes, Rota rota, Astro astro, Adeno adeno) {
+	public MainScreenController(HIV hiv, Covid19 covid, Herpes herpes, Rota rota, Astro astro, Adeno adeno, JFrame jFrame) {
 		this.hiv = hiv;
 		this.covid = covid;
 		this.herpes = herpes;
 		this.rota = rota;
 		this.astro = astro;
 		this.adeno = adeno;
-		//this.jFrame = jFrame;
-
+		this.jFrame = jFrame;
 	}
 
     @FXML
-    private Button virusWithoutEnvelopeBtn;
-    
-    @FXML
-    private Button virusWithEnvelopeBtn;
-
-    @FXML
-    private Button quitBtn;
-
-    @FXML
-    private Button helpBtn;
-    
-    @FXML
-    private Button hivBtn;
-
-    @FXML
-    private Button covid19Btn;
-
-    @FXML
-    private Button rotaBtn;
-    
-    @FXML
-    private Button adenoBtn;
-
-    @FXML
-    private Button astroBtn;
-    
-    @FXML
-    private Button herpesBtn;
-    
-    @FXML
-    private Button returnBtn;
+    private Button virusWithoutEnvelopeBtn, virusWithEnvelopeBtn, quitBtn, helpBtn, hivBtn, covid19Btn,
+    		rotaBtn, adenoBtn, astroBtn, herpesBtn, returnBtn;
 
     @FXML
     void virusWithEnvelopeBtnPressed(ActionEvent event) {
@@ -81,7 +50,7 @@ public class MainScreenController implements Initializable{
     @FXML
     void virusWithoutEnvelopeBtnPressed(ActionEvent event) {
     	rotaBtn.setVisible(true);
-    	astroBtn.setVisible(true);   
+    	astroBtn.setVisible(true);
     	adenoBtn.setVisible(true);
     	returnBtn.setVisible(true);
     	virusWithoutEnvelopeBtn.setVisible(false);
@@ -90,7 +59,6 @@ public class MainScreenController implements Initializable{
 
     @FXML
     void helpBtnPressed(ActionEvent event) {
-
     }
 
     @FXML
@@ -107,32 +75,38 @@ public class MainScreenController implements Initializable{
 
     @FXML
     void hivBtnPressed(ActionEvent event) {
-    	hiv.infecting();
+    	jFrame.setVisible(false);
+    	new StructureScreen(hiv, jFrame);
     }
 
     @FXML
     void covid19Btn(ActionEvent event) {
-    	covid.infecting();
+    	jFrame.setVisible(false);
+    	new StructureScreen(covid, jFrame);
     }
 
     @FXML
     void herpesBtn(ActionEvent event) {
-    	herpes.infecting();
+    	jFrame.setVisible(false);
+    	new StructureScreen(herpes, jFrame);
     }
 
     @FXML
     void rotaBtn(ActionEvent event) {
-    	rota.infecting();
+    	jFrame.setVisible(false);
+    	new StructureScreen(rota, jFrame);
     }
 
     @FXML
     void astroBtn(ActionEvent event) {
-    	adeno.infecting();
+    	jFrame.setVisible(false);
+    	new StructureScreen(astro, jFrame);
     }
 
     @FXML
     void adenoBtn(ActionEvent event) {
-    	astro.infecting();
+    	jFrame.setVisible(false);
+    	new StructureScreen(adeno, jFrame);
     }
     
     @FXML
@@ -158,5 +132,4 @@ public class MainScreenController implements Initializable{
     	adenoBtn.setVisible(false);
     	returnBtn.setVisible(false);
     }
-
 }
