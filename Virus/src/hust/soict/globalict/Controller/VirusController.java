@@ -59,7 +59,6 @@ public class VirusController {
 		});
 		btBack.setOnAction((ActionEvent) -> {
 			jFrame.setVisible(false);
-			new MainScreen((HIV) virus, (Covid19) virus, (Herpes) virus, (Rota) virus, (Astro) virus, (Adeno) virus, jFrame);
 		});
 		btViewInfectingDetail.setOnAction((ActionEvent) -> {
 			jFrame.setVisible(false);
