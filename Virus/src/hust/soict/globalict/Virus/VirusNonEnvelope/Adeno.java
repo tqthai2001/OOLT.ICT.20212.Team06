@@ -1,35 +1,37 @@
 package hust.soict.globalict.Virus.VirusNonEnvelope;
 
-import hust.soict.globalict.Virus.Element;
+import java.util.List;
+
+import hust.soict.globalict.Virus.Element.AcidNucleic;
+import hust.soict.globalict.Virus.Element.Capsid;
+import hust.soict.globalict.Virus.Element.OtherElement;
 import javafx.scene.image.Image;
 
 public class Adeno extends VirusWithoutEnvelope {
-	private Element pentonBase;
-	private Element fiber;
-	private Element knobDomain;
+	private OtherElement pentonBase;
+	private OtherElement fiber;
+	private OtherElement knobDomain;
 	
-	public Element getPentonBase() {
+	public OtherElement getPentonBase() {
 		return pentonBase;
 	}
-	public Element getFiber() {
+	public OtherElement getFiber() {
 		return fiber;
 	}
-	public Element getKnobDomain() {
+	public OtherElement getKnobDomain() {
 		return knobDomain;
 	}
 	public String getVirusName() {
 		return this.getClass().getSimpleName();
 	}
 	
-	public Adeno(Element acidNucleic, Element capsid, String[] symptoms, String[] infectingMethod, Image imageOverview, Element pentonBase,
-			Element fiber, Element knobDomain) {
-		super(acidNucleic, capsid, symptoms, infectingMethod, imageOverview);
+	public Adeno(List<String> symptoms, List<String> infectingMethod, Image imageOverview, AcidNucleic acidNucleic,
+			Capsid capsid, OtherElement pentonBase, OtherElement fiber, OtherElement knobDomain) {
+		super(symptoms, infectingMethod, imageOverview, acidNucleic, capsid);
 		this.pentonBase = pentonBase;
 		this.fiber = fiber;
 		this.knobDomain = knobDomain;
-		this.listOfElements.add(fiber);
-		this.listOfElements.add(knobDomain);
-		this.listOfElements.add(pentonBase);
+		this.addElement(pentonBase, fiber, knobDomain);
 	}
 	
 	@Override

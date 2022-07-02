@@ -1,6 +1,7 @@
 package hust.soict.globalict.Controller;
 
 import hust.soict.globalict.Virus.*;
+import hust.soict.globalict.Virus.Element.Element;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
@@ -22,12 +23,13 @@ public class VirusStructureController extends VirusController implements Initial
 		super(virus, jFrame);
     }
 	
-    public VirusStructureController(Button btViewInfecting, Button btViewStructure, Button btBack) {
-		super(btViewInfecting, btViewStructure, btBack);
+    public VirusStructureController(Button btViewInfecting, Button btViewStructure, Button btBack,
+			Button btViewInfectingDetail) {
+		super(btViewInfecting, btViewStructure, btBack, btViewInfectingDetail);
 		// TODO Auto-generated constructor stub
 	}
-    
-    @FXML
+
+	@FXML
     private Label lbStructure;
 
 	@FXML
@@ -53,12 +55,12 @@ public class VirusStructureController extends VirusController implements Initial
     
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-    	lbStructure.setText("Structure of " + virus.getClass().getSimpleName());
+    	lbStructure.setText("Structure of " + virus.getVirusName());
     	imgStructure.setImage(virus.getImageOverview());
     	centerImage();
     	taDesc.setText(virus.getDetail());
 	    for (Element element : virus.getElements()) {	
-	    	Button b = new Button(element.getName());
+	    	Button b = new Button(element.getNameOfElement());
 	    	hbElement.getChildren().add(b);
 	    	b.setOnAction((ActionEvent)->{
 	    		imgStructure.setImage(element.getImage());
@@ -69,6 +71,7 @@ public class VirusStructureController extends VirusController implements Initial
 	    }
 	    handleSideBar();
     }
+    
     private void centerImage() {
         Image img = imgStructure.getImage();
         if (img != null) {

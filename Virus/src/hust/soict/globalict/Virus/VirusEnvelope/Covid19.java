@@ -1,41 +1,43 @@
 package hust.soict.globalict.Virus.VirusEnvelope;
 
-import hust.soict.globalict.Virus.Element;
+import java.util.List;
+
+import hust.soict.globalict.Virus.Element.AcidNucleic;
+import hust.soict.globalict.Virus.Element.Capsid;
+import hust.soict.globalict.Virus.Element.OtherElement;
 import javafx.scene.image.Image;
 
 public class Covid19 extends VirusWithEnvelope {
-	private Element Mprotein;
-	private Element Eprotein;
-	private Element he;
-	private Element Spike;
-
-	public Element getMprotein() {
-		return Mprotein;
+	private OtherElement mProtein;
+	private OtherElement eProtein;
+	private OtherElement he;
+	private OtherElement spike;
+	
+	public OtherElement getmProtein() {
+		return mProtein;
 	}
-	public Element getEprotein() {
-		return Eprotein;
+	public OtherElement geteProtein() {
+		return eProtein;
 	}
-	public Element getHe() {
+	public OtherElement getHe() {
 		return he;
 	}
-	public Element getSpike() {
-		return Spike;
+	public OtherElement getSpike() {
+		return spike;
 	}
 	public String getVirusName() {
-		return this.getClass().getSimpleName();
+		return "Covid-19";
 	}
 	
-	public Covid19(Element acidNucleic, Element capsid, String[] symptoms, String[] infectingMethod,
-			Image imageOverview, Element envelope, Element mprotein, Element eprotein, Element he, Element spike) {
-		super(acidNucleic, capsid, envelope, symptoms, infectingMethod, imageOverview);
-		this.Mprotein = mprotein;
-		this.Eprotein = eprotein;
+	public Covid19(List<String> symptoms, List<String> infectingMethod, Image imageOverview, AcidNucleic acidNucleic,
+			Capsid capsid, String envelopeDesc, Image envelopeImage, OtherElement mProtein, OtherElement eProtein,
+			OtherElement he, OtherElement spike) {
+		super(symptoms, infectingMethod, imageOverview, acidNucleic, capsid, envelopeDesc, envelopeImage);
+		this.mProtein = mProtein;
+		this.eProtein = eProtein;
 		this.he = he;
-		this.Spike = spike;
-		this.listOfElements.add(spike);
-		this.listOfElements.add(he);
-		this.listOfElements.add(eprotein);
-		this.listOfElements.add(mprotein);
+		this.spike = spike;
+		this.addElement(spike, he, mProtein, eProtein);
 	}
 	
 	@Override

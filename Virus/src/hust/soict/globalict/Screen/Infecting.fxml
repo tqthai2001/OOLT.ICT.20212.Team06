@@ -24,7 +24,8 @@
                </children>
             </Pane>
             <Button fx:id="btViewStructure" mnemonicParsing="false" prefHeight="69.0" prefWidth="298.0" style="-fx-background-color: transparent;" text="Structure" textFill="WHITE" />
-            <Button fx:id="btViewInfecting" mnemonicParsing="false" prefHeight="69.0" prefWidth="298.0" style="-fx-background-color: transparent;" text="Infecting" textFill="WHITE" />
+            <Button fx:id="btViewInfecting" mnemonicParsing="false" prefHeight="69.0" prefWidth="298.0" style="-fx-background-color: transparent;" text="Infecting General" textFill="WHITE" />
+            <Button fx:id="btViewInfectingDetail" mnemonicParsing="false" prefHeight="69.0" prefWidth="298.0" style="-fx-background-color: transparent;" text="Infecting" textFill="WHITE" />
             <Button fx:id="btBack" mnemonicParsing="false" prefHeight="69.0" prefWidth="298.0" style="-fx-background-color: transparent;" text="Back" textFill="WHITE" />
          </children>
       </VBox>

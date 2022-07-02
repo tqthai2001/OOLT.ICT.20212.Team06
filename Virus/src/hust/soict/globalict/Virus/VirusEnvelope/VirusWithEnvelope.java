@@ -1,21 +1,24 @@
 package hust.soict.globalict.Virus.VirusEnvelope;
 
-import hust.soict.globalict.Virus.Element;
+import java.util.List;
+
 import hust.soict.globalict.Virus.Virus;
+import hust.soict.globalict.Virus.Element.AcidNucleic;
+import hust.soict.globalict.Virus.Element.Capsid;
+import hust.soict.globalict.Virus.Element.Envelope;
 import javafx.scene.image.Image;
 
-public abstract class VirusWithEnvelope extends Virus {
-	private Element envelope;
+public class VirusWithEnvelope extends Virus {
+	private final Envelope envelope;
 	
-	public VirusWithEnvelope() {
-		super();
-	}
-	public VirusWithEnvelope(Element acidNucleic, Element capsid, Element envelope, String[] symptoms, String[] infectingMethod, Image imageOverview) {
-		super(acidNucleic, capsid, symptoms, infectingMethod, imageOverview);
-		this.envelope = envelope;
-		this.listOfElements.add(envelope);
-	}
-	public Element getEnvelope() {
+	public Envelope getEnvelope() {
 		return envelope;
+	}
+	
+	public VirusWithEnvelope(List<String> symptoms, List<String> infectingMethod, Image imageOverview,
+			AcidNucleic acidNucleic, Capsid capsid, String envelopeDesc, Image envelopeImage) {
+		super(symptoms, infectingMethod, imageOverview, acidNucleic, capsid);
+		this.envelope = new Envelope(envelopeImage, envelopeDesc);
+		this.addElement(envelope);
 	}
 }

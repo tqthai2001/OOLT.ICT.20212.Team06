@@ -4,14 +4,23 @@ import java.awt.HeadlessException;
 
 import javax.swing.JFrame;
 
+import hust.soict.globalict.Screen.InfectingDetailScreen;
+import hust.soict.globalict.Screen.InfectingScreen;
+import hust.soict.globalict.Screen.MainScreen;
 import hust.soict.globalict.Screen.StructureScreen;
 import hust.soict.globalict.Virus.Virus;
+import hust.soict.globalict.Virus.VirusEnvelope.Covid19;
+import hust.soict.globalict.Virus.VirusEnvelope.HIV;
+import hust.soict.globalict.Virus.VirusEnvelope.Herpes;
+import hust.soict.globalict.Virus.VirusNonEnvelope.Adeno;
+import hust.soict.globalict.Virus.VirusNonEnvelope.Astro;
+import hust.soict.globalict.Virus.VirusNonEnvelope.Rota;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 
 public class VirusController {
 	@FXML
-    protected Button btViewInfecting, btViewStructure, btBack;
+    protected Button btViewInfecting, btViewStructure, btBack, btViewInfectingDetail;
 	protected Virus virus;
 	protected JFrame jFrame;
 	
@@ -30,25 +39,31 @@ public class VirusController {
 		this.virus = virus;
 		this.jFrame = jFrame;
 	}
-	public VirusController(Button btViewInfecting, Button btViewStructure, Button btBack) {
+	public VirusController(Button btViewInfecting, Button btViewStructure, Button btBack,
+			Button btViewInfectingDetail) {
 		super();
 		this.btViewInfecting = btViewInfecting;
 		this.btViewStructure = btViewStructure;
 		this.btBack = btBack;
+		this.btViewInfectingDetail = btViewInfectingDetail;
 	}
 	
 	public void handleSideBar() {
 		btViewInfecting.setOnAction((ActionEvent) -> {
 			jFrame.setVisible(false);
-			this.virus.infecting();
+			new InfectingScreen(virus, jFrame);
 		});
 		btViewStructure.setOnAction((ActionEvent) -> {
 			jFrame.setVisible(false);
-			new StructureScreen(virus);
+			new StructureScreen(virus, jFrame);
 		});
 		btBack.setOnAction((ActionEvent) -> {
 			jFrame.setVisible(false);
-			new StructureScreen(virus);
+			new MainScreen((HIV) virus, (Covid19) virus, (Herpes) virus, (Rota) virus, (Astro) virus, (Adeno) virus, jFrame);
+		});
+		btViewInfectingDetail.setOnAction((ActionEvent) -> {
+			jFrame.setVisible(false);
+			new InfectingDetailScreen(virus, jFrame);
 		});
 	}
 }
