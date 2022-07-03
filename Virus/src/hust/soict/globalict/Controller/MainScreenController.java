@@ -3,6 +3,8 @@ package hust.soict.globalict.Controller;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javax.swing.JFrame;
+
+import hust.soict.globalict.Screen.HelpScreen;
 import hust.soict.globalict.Screen.StructureScreen;
 import hust.soict.globalict.Virus.VirusEnvelope.*;
 import hust.soict.globalict.Virus.VirusNonEnvelope.*;
@@ -59,10 +61,11 @@ public class MainScreenController implements Initializable{
 
     @FXML
     void helpBtnPressed(ActionEvent event) {
+    	new HelpScreen();
     }
 
     @FXML
-    void quitBtn(ActionEvent event) {
+    void quitBtnPressed(ActionEvent event) {
     	Alert alert = new Alert(AlertType.CONFIRMATION);
     	alert.setTitle("Exit");
     	alert.setHeaderText("Application Closing");
