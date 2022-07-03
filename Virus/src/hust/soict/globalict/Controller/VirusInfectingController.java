@@ -18,6 +18,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextArea;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.util.Duration;
@@ -33,6 +34,15 @@ public class VirusInfectingController extends VirusController implements Initial
     private AnchorPane apVirusEnvelopeInfection, apVirusNonEnvelopeInfection;
 	@FXML
     private Label lbTypeOfVirus;
+    @FXML
+    private TextArea descTf;
+    String overviewWithEnvelope = "Direct fusion: \n"
+			+ "The viral nucleocapsids enter the cell by the\n fusion between viral envelope and plasma\n membrane.\r\n"
+			+ "Direct fusion, as its name implies,\n is a mechanism in which two membranes\n (ie, the viral envelope and cell membrane) fuse.\n In this case, the viral nucleocapsid is directly\n delivered to the cytoplasm, leaving the viral\n envelope behind on the plasma membrane.\r\n";
+	String overviewWithoutEnvelope = "Receptor-mediated endocytosis: \n"
+			+ "A component of viral nucleocapsid triggers the\n"
+			+ " lysis of endosomal membrane necessary for\n"
+			+ "the release of the viral genome to the\n cytoplasm.";
 
 	public VirusInfectingController(Virus virus, JFrame jFrame) {
 		super(virus, jFrame);
@@ -58,6 +68,8 @@ public class VirusInfectingController extends VirusController implements Initial
 			virusCovered = virusAndEnvelope;
 			virusKernel = virusEnvelopeKernel;
 			acid = acidE;
+			descTf.setText(overviewWithEnvelope);
+
 		}
 		else if (virus instanceof VirusWithoutEnvelope) {
 			apVirusEnvelopeInfection.setVisible(false);
@@ -66,6 +78,7 @@ public class VirusInfectingController extends VirusController implements Initial
 			virusCovered = virusNonEnvelopeAndEnvelope;
 			virusKernel = virusNonEnvelopeKernel;
 			acid = acidNonE;
+			descTf.setText(overviewWithoutEnvelope);
 		}
 		virusKernel.setOpacity(0);
 		virusCovered.setOpacity(0);
@@ -87,6 +100,7 @@ public class VirusInfectingController extends VirusController implements Initial
 		scaleVirusOverview.setToY(1.5);
 		scaleVirusOverview.play();
 		transition.play();
+		descTf.setText("Entry:\n The virus infects in to our bodies and\n approaches the target cells.");
 	}
 
 	@FXML
@@ -103,6 +117,7 @@ public class VirusInfectingController extends VirusController implements Initial
     	fadeOutCell.play();
     	fadeInCell1.play();
     	transition.play();
+    	descTf.setText("Attachment:\n The virus attaches itself to the host-cell.");
 	}
 
 	@FXML
@@ -130,6 +145,7 @@ public class VirusInfectingController extends VirusController implements Initial
     	Timeline fadeInVirusAndEnvelope = new Timeline(new KeyFrame(Duration.millis(2000), new KeyValue(virusCovered.opacityProperty(), 1.0)));
     	fadeInVirusAndEnvelope.setDelay(Duration.millis(500));
     	fadeInVirusAndEnvelope.play();
+    	descTf.setText("Penetration:\n The virus is brought into the target cell.");
 	}
 
 	@FXML
@@ -146,6 +162,7 @@ public class VirusInfectingController extends VirusController implements Initial
     	transitionKernel.setToX(250);
     	transitionKernel.setDuration(Duration.millis(2500));
     	transitionKernel.play();
+    	descTf.setText("Uncoating:\n The virus loses its envelope (if\n it’s enveloped) or capsid (if it’s non-enveloped).");
 	}
 	
 	@FXML
@@ -160,6 +177,10 @@ public class VirusInfectingController extends VirusController implements Initial
 		scaleAcid.setToX(3);
 		scaleAcid.setToY(3);
 		scaleAcid.play();
+		descTf.setText("Replication, Assembly and Release:\n"
+				+ " viral RNA is released into the nucleus, where\n"
+				+ " it is replicated and assembled.\n"
+				+ " Finally, new viral particles are released.");
 	}
 
 	@FXML
@@ -186,5 +207,11 @@ public class VirusInfectingController extends VirusController implements Initial
 		virusOverview.setTranslateY(0);
 		virusCovered.setTranslateX(0);
 		virusCovered.setTranslateY(0);
+		if (virus instanceof VirusWithEnvelope) {
+			descTf.setText(overviewWithEnvelope);
+		}
+		else if (virus instanceof VirusWithoutEnvelope) {
+			descTf.setText(overviewWithoutEnvelope);
+		}
 	}
 }

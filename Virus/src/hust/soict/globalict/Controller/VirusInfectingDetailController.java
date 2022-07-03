@@ -8,6 +8,7 @@ import javax.swing.JFrame;
 
 import hust.soict.globalict.Virus.Virus;
 import hust.soict.globalict.Virus.VirusEnvelope.VirusWithEnvelope;
+import hust.soict.globalict.Virus.VirusNonEnvelope.VirusWithoutEnvelope;
 import javafx.animation.FadeTransition;
 import javafx.animation.KeyFrame;
 import javafx.animation.KeyValue;
@@ -18,6 +19,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextArea;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.HBox;
@@ -34,10 +36,31 @@ public class VirusInfectingDetailController extends VirusController implements I
     private Label lbNameVirus;
     @FXML
     private HBox hbAcid;
+    @FXML
+    private TextArea detailedDescTf;
+    
 
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		// TODO Auto-generated method stub
+		String detailedWithEnvelope = "The virus attacks the cell.\n"
+				+ " The capsid separates from the envelope.\n"
+				+ " Then the capsid is dissolved and the\n"
+				+ " nucleic acid remains. The number of nucleic\n"
+				+ " acids copied depends on the virus type.";
+		String detailedWithoutEnvelope = "The virus attacks the cell.\n"
+				+ "Since the virus has no envelope,\n it can't fuse with the cell membrane\n"
+				+ "After being enclosed by the cell\n membrane and penetrate the cell\n"
+				+ " The capsid separates from the envelope.\n"
+				+ " Then the capsid is dissolved and the\n"
+				+ " nucleic acid remains. The number of nucleic\n"
+				+ " acids copied depends on the virus type.";
+		if (virus instanceof VirusWithEnvelope) {
+			detailedDescTf.setText(detailedWithEnvelope);
+		}
+		else {
+			detailedDescTf.setText(detailedWithoutEnvelope);
+		}
 		lbNameVirus.setText("Infection of " + virus.getVirusName());
 		for (int i = 0; i < virus.getAcidNucleic().getNumCopy(); i++) {
 			ImageView acid = new ImageView();
@@ -57,6 +80,7 @@ public class VirusInfectingDetailController extends VirusController implements I
 		btnPlay.setVisible(true);
 		btnReplay.setVisible(false);
 		handleSideBar();
+
 	}
 	
     private void processInfection() {

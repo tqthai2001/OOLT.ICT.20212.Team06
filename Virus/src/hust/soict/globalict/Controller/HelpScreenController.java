@@ -25,7 +25,7 @@ public class HelpScreenController implements Initializable{
 
     @FXML
     void previousBtnPressed(ActionEvent event) {
-    	if (i<=0) {
+    	if (i==0) {
     		i = listOfImages.size();
     	}
     	if (i>0) {
@@ -37,7 +37,7 @@ public class HelpScreenController implements Initializable{
     @FXML
     void nextBtnPressed(ActionEvent event) {
     	if (i == listOfImages.size()-1) {
-    		i = 0;
+    		i = -1;
     	}
 	if (i<listOfImages.size()) {
 		i++;

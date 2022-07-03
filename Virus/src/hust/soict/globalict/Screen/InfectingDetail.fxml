@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
@@ -11,7 +17,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <VBox prefHeight="720.0" prefWidth="260.0" style="-fx-background-color: #333;">
          <children>
@@ -28,6 +34,7 @@
             <Button fx:id="btViewInfecting" mnemonicParsing="false" prefHeight="69.0" prefWidth="298.0" style="-fx-background-color: transparent;" text="Infecting General" textFill="WHITE" />
             <Button fx:id="btViewInfectingDetail" mnemonicParsing="false" prefHeight="69.0" prefWidth="298.0" style="-fx-background-color: transparent;" text="Infecting" textFill="WHITE" />
             <Button fx:id="btBack" mnemonicParsing="false" prefHeight="69.0" prefWidth="298.0" style="-fx-background-color: transparent;" text="Back" textFill="WHITE" />
+            <TextArea fx:id="detailedDescTf" prefHeight="244.0" prefWidth="260.0" />
          </children>
       </VBox>
       <ImageView fx:id="hostcell" fitHeight="415.0" fitWidth="1052.0" layoutX="260.0" layoutY="305.0" pickOnBounds="true" preserveRatio="true">
