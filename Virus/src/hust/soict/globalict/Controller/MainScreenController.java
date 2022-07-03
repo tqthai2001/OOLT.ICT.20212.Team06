@@ -16,7 +16,7 @@ import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
 import javafx.scene.control.ButtonType;
 
-public class MainScreenController implements Initializable{
+public class MainScreenController implements Initializable {
 	private HIV hiv;
 	private Covid19 covid;
 	private Herpes herpes;
@@ -78,37 +78,31 @@ public class MainScreenController implements Initializable{
 
     @FXML
     void hivBtnPressed(ActionEvent event) {
-//    	jFrame.setVisible(false);
     	new StructureScreen(hiv, jFrame);
     }
 
     @FXML
     void covid19Btn(ActionEvent event) {
-//    	jFrame.setVisible(false);
     	new StructureScreen(covid, jFrame);
     }
 
     @FXML
     void herpesBtn(ActionEvent event) {
-//    	jFrame.setVisible(false);
     	new StructureScreen(herpes, jFrame);
     }
 
     @FXML
     void rotaBtn(ActionEvent event) {
-//    	jFrame.setVisible(false);
     	new StructureScreen(rota, jFrame);
     }
 
     @FXML
     void astroBtn(ActionEvent event) {
-//    	jFrame.setVisible(false);
     	new StructureScreen(astro, jFrame);
     }
 
     @FXML
     void adenoBtn(ActionEvent event) {
-//    	jFrame.setVisible(false);
     	new StructureScreen(adeno, jFrame);
     }
     
