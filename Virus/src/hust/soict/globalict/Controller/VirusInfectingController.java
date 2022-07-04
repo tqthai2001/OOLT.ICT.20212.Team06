@@ -36,13 +36,11 @@ public class VirusInfectingController extends VirusController implements Initial
     private Label lbTypeOfVirus;
     @FXML
     private TextArea descTf;
-    String overviewWithEnvelope = "Direct fusion: \n"
-			+ "The viral nucleocapsids enter the cell by the\n fusion between viral envelope and plasma\n membrane.\r\n"
-			+ "Direct fusion, as its name implies,\n is a mechanism in which two membranes\n (ie, the viral envelope and cell membrane) fuse.\n In this case, the viral nucleocapsid is directly\n delivered to the cytoplasm, leaving the viral\n envelope behind on the plasma membrane.\r\n";
-	String overviewWithoutEnvelope = "Receptor-mediated endocytosis: \n"
-			+ "A component of viral nucleocapsid triggers the\n"
-			+ " lysis of endosomal membrane necessary for\n"
-			+ "the release of the viral genome to the\n cytoplasm.";
+    String overviewWithEnvelope = "Direct fusion:\n"
+			+ "The viral nucleocapsids enter the cell by the fusion between viral envelope and plasma membrane. "
+			+ "Direct fusion, as its name implies, is a mechanism in which two membranes (ie: the viral envelope and cell membrane) fuse. In this case, the viral nucleocapsid is directly delivered to the cytoplasm, leaving the viral envelope behind on the plasma membrane.";
+	String overviewWithoutEnvelope = "Receptor-mediated endocytosis:\n"
+			+ "A component of viral nucleocapsid triggers the lysis of endosomal membrane necessary for the release of the viral genome to the cytoplasm.";
 
 	public VirusInfectingController(Virus virus, JFrame jFrame) {
 		super(virus, jFrame);
@@ -61,6 +59,7 @@ public class VirusInfectingController extends VirusController implements Initial
 		cell1.setOpacity(0);
 		virusEnvelopeOnly.setOpacity(0);
 		lbTypeOfVirus.setText("Infection of " + virus.getVirusName());
+		descTf.setWrapText(true);
 		if (virus instanceof VirusWithEnvelope) {
 			apVirusEnvelopeInfection.setVisible(true);
 			apVirusNonEnvelopeInfection.setVisible(false);
@@ -69,7 +68,6 @@ public class VirusInfectingController extends VirusController implements Initial
 			virusKernel = virusEnvelopeKernel;
 			acid = acidE;
 			descTf.setText(overviewWithEnvelope);
-
 		}
 		else if (virus instanceof VirusWithoutEnvelope) {
 			apVirusEnvelopeInfection.setVisible(false);
@@ -100,7 +98,7 @@ public class VirusInfectingController extends VirusController implements Initial
 		scaleVirusOverview.setToY(1.5);
 		scaleVirusOverview.play();
 		transition.play();
-		descTf.setText("Entry:\n The virus infects in to our bodies and\n approaches the target cells.");
+		descTf.setText("Entry:\nThe virus infects in to our bodies and approaches the target cells.");
 	}
 
 	@FXML
@@ -117,7 +115,7 @@ public class VirusInfectingController extends VirusController implements Initial
     	fadeOutCell.play();
     	fadeInCell1.play();
     	transition.play();
-    	descTf.setText("Attachment:\n The virus attaches itself to the host-cell.");
+    	descTf.setText("Attachment:\nThe virus attaches itself to the host-cell.");
 	}
 
 	@FXML
@@ -145,7 +143,7 @@ public class VirusInfectingController extends VirusController implements Initial
     	Timeline fadeInVirusAndEnvelope = new Timeline(new KeyFrame(Duration.millis(2000), new KeyValue(virusCovered.opacityProperty(), 1.0)));
     	fadeInVirusAndEnvelope.setDelay(Duration.millis(500));
     	fadeInVirusAndEnvelope.play();
-    	descTf.setText("Penetration:\n The virus is brought into the target cell.");
+    	descTf.setText("Penetration:\nThe virus is brought into the target cell.");
 	}
 
 	@FXML
@@ -162,7 +160,7 @@ public class VirusInfectingController extends VirusController implements Initial
     	transitionKernel.setToX(250);
     	transitionKernel.setDuration(Duration.millis(2500));
     	transitionKernel.play();
-    	descTf.setText("Uncoating:\n The virus loses its envelope (if\n it’s enveloped) or capsid (if it’s non-enveloped).");
+    	descTf.setText("Uncoating:\nThe virus loses its envelope (if it is enveloped) or capsid (if it is non-enveloped).");
 	}
 	
 	@FXML
@@ -178,9 +176,7 @@ public class VirusInfectingController extends VirusController implements Initial
 		scaleAcid.setToY(3);
 		scaleAcid.play();
 		descTf.setText("Replication, Assembly and Release:\n"
-				+ " viral RNA is released into the nucleus, where\n"
-				+ " it is replicated and assembled.\n"
-				+ " Finally, new viral particles are released.");
+				+ "Viral RNA is released into the nucleus, where it is replicated and assembled. Finally, new viral particles are released.");
 	}
 
 	@FXML

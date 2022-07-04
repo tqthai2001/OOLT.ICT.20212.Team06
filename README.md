@@ -19,14 +19,12 @@
 
 3. Tran Quang Thai
 
-- Refactor Structure of Virus
-- Construct the InfectingScreen, InfectingController
+-   Refactor Structure of Virus
+-   Construct the InfectingScreen, InfectingController
 -	hust.soict.globalict.Screen: Infecting Screen, Infecting Detail Screen
 -	hust.soict.globalict.Controller: Virus Controller, Virus Infecting Controller, Virus Infecting Detail Controller
 -	Design the Relationship: Composition & Aggregation
-- Design Polymorphism
+-   Design Polymorphism
 -	Merge and Fix all work of each member
-
-Link Video Demo Vietnamese: https://drive.google.com/file/d/1H73Gc7o85_y5tfFmZ09EYcXRwWX74H6S/view?fbclid=IwAR2xpkEgs7RaANTm1Sr_-e5GESLsMMdDpTLk7zfQcVMqxjn7Ig4Gqa7H1mM
 
 Link Video Demo English: https://drive.google.com/file/d/1MoCF9JB-14fV6zoEqFWExfYZVU5Y6Mvk/view?usp=sharing

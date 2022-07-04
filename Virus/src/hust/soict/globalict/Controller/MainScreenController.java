@@ -60,11 +60,6 @@ public class MainScreenController implements Initializable {
     }
 
     @FXML
-    void helpBtnPressed(ActionEvent event) {
-    	new HelpScreen();
-    }
-
-    @FXML
     void quitBtnPressed(ActionEvent event) {
     	Alert alert = new Alert(AlertType.CONFIRMATION);
     	alert.setTitle("Exit");
@@ -74,6 +69,11 @@ public class MainScreenController implements Initializable {
     	if (alert.showAndWait().get() == ButtonType.OK){
     		System.exit(0);
     	} 
+    }
+    
+    @FXML
+    void helpBtnPressed(ActionEvent event) {
+    	new HelpScreen(jFrame);
     }
 
     @FXML

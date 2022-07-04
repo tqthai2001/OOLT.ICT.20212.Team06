@@ -8,7 +8,6 @@ import javax.swing.JFrame;
 
 import hust.soict.globalict.Virus.Virus;
 import hust.soict.globalict.Virus.VirusEnvelope.VirusWithEnvelope;
-import hust.soict.globalict.Virus.VirusNonEnvelope.VirusWithoutEnvelope;
 import javafx.animation.FadeTransition;
 import javafx.animation.KeyFrame;
 import javafx.animation.KeyValue;
@@ -43,24 +42,16 @@ public class VirusInfectingDetailController extends VirusController implements I
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		// TODO Auto-generated method stub
-		String detailedWithEnvelope = "The virus attacks the cell.\n"
-				+ " The capsid separates from the envelope.\n"
-				+ " Then the capsid is dissolved and the\n"
-				+ " nucleic acid remains. The number of nucleic\n"
-				+ " acids copied depends on the virus type.";
-		String detailedWithoutEnvelope = "The virus attacks the cell.\n"
-				+ "Since the virus has no envelope,\n it can't fuse with the cell membrane\n"
-				+ "After being enclosed by the cell\n membrane and penetrate the cell\n"
-				+ " The capsid separates from the envelope.\n"
-				+ " Then the capsid is dissolved and the\n"
-				+ " nucleic acid remains. The number of nucleic\n"
-				+ " acids copied depends on the virus type.";
 		if (virus instanceof VirusWithEnvelope) {
-			detailedDescTf.setText(detailedWithEnvelope);
+			detailedDescTf.setText("The virus attacks the cell. The capsid separates from the envelope. Then the capsid is dissolved and the"
+					+ " nucleic acid remains. The number of nucleic acids copied depends on the virus type.");
 		}
 		else {
-			detailedDescTf.setText(detailedWithoutEnvelope);
+			detailedDescTf.setText("The virus attacks the cell. Since the virus has no envelope, it can't fuse with the cell membrane."
+					+ " After being enclosed by the cell membrane and penetrate the cell. The capsid separates from the envelope."
+					+ " Then the capsid is dissolved and the nucleic acid remains. The number of nucleic acids copied depends on the virus type.");
 		}
+		detailedDescTf.setWrapText(true);
 		lbNameVirus.setText("Infection of " + virus.getVirusName());
 		for (int i = 0; i < virus.getAcidNucleic().getNumCopy(); i++) {
 			ImageView acid = new ImageView();

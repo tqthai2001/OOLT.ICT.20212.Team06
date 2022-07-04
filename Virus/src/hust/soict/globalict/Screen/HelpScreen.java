@@ -5,13 +5,6 @@ import java.awt.HeadlessException;
 import javax.swing.JFrame;
 
 import hust.soict.globalict.Controller.HelpScreenController;
-import hust.soict.globalict.Controller.MainScreenController;
-import hust.soict.globalict.Virus.VirusEnvelope.Covid19;
-import hust.soict.globalict.Virus.VirusEnvelope.HIV;
-import hust.soict.globalict.Virus.VirusEnvelope.Herpes;
-import hust.soict.globalict.Virus.VirusNonEnvelope.Adeno;
-import hust.soict.globalict.Virus.VirusNonEnvelope.Astro;
-import hust.soict.globalict.Virus.VirusNonEnvelope.Rota;
 import javafx.application.Platform;
 import javafx.embed.swing.JFXPanel;
 import javafx.fxml.FXMLLoader;
@@ -19,7 +12,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 
 public class HelpScreen extends JFrame {
-	public HelpScreen() throws HeadlessException {
+	public HelpScreen(JFrame jFrame) throws HeadlessException {
 		super();
 		HelpScreen helpScreen = this;
 		JFXPanel fxPanel = new JFXPanel();
@@ -35,7 +28,7 @@ public class HelpScreen extends JFrame {
 				// TODO Auto-generated method stub
 				try {
 					FXMLLoader loader = new FXMLLoader(getClass().getResource("HelpScreen.fxml"));
-					HelpScreenController helpScreenController = new HelpScreenController();
+					HelpScreenController helpScreenController = new HelpScreenController(helpScreen);
 					loader.setController(helpScreenController);
 					Parent root = loader.load();
 					Scene scene = new Scene(root);
