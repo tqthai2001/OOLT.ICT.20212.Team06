@@ -5,12 +5,6 @@ import javax.swing.JFrame;
 
 import hust.soict.globalict.Controller.MainScreenController;
 
-import hust.soict.globalict.Virus.VirusEnvelope.Covid19;
-import hust.soict.globalict.Virus.VirusEnvelope.HIV;
-import hust.soict.globalict.Virus.VirusEnvelope.Herpes;
-import hust.soict.globalict.Virus.VirusNonEnvelope.Adeno;
-import hust.soict.globalict.Virus.VirusNonEnvelope.Astro;
-import hust.soict.globalict.Virus.VirusNonEnvelope.Rota;
 import javafx.application.Platform;
 import javafx.embed.swing.JFXPanel;
 import javafx.fxml.FXMLLoader;
@@ -18,22 +12,10 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 
 public class MainScreen extends JFrame {
-	private HIV hiv;
-	private Covid19 covid;
-	private Herpes herpes;
-	private Rota rota;
-	private Astro astro;
-	private Adeno adeno;
 	private JFrame jFrame;
 	
 	public MainScreen(JFrame jFrame) throws HeadlessException {
 		super();
-//		this.hiv = hiv;
-//		this.covid = covid;
-//		this.herpes = herpes;
-//		this.rota = rota;
-//		this.astro = astro;
-//		this.adeno = adeno;
 		MainScreen mainScreen = this;
 		JFXPanel fxPanel = new JFXPanel();
 		this.add(fxPanel);
