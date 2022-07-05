@@ -6,6 +6,7 @@ import java.util.ResourceBundle;
 
 import javax.swing.JFrame;
 
+import hust.soict.globalict.Screen.MainScreen;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -49,6 +50,7 @@ public class HelpScreenController implements Initializable {
     @FXML
     void backBtnPressed(ActionEvent event) {
     	jFrame.setVisible(false);
+    	new MainScreen(jFrame);
     }
 
     @Override

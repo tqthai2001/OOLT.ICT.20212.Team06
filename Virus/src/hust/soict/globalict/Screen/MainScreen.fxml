@@ -34,7 +34,7 @@
       <Button fx:id="hivBtn" layoutX="306.0" layoutY="273.0" mnemonicParsing="false" onAction="#hivBtnPressed" prefHeight="80.0" prefWidth="150.0" text="HIV" />
       <Button fx:id="covid19Btn" layoutX="565.0" layoutY="273.0" mnemonicParsing="false" onAction="#covid19Btn" prefHeight="80.0" prefWidth="150.0" text="Covid19" />
       <Button fx:id="herpesBtn" layoutX="811.0" layoutY="273.0" mnemonicParsing="false" onAction="#herpesBtn" prefHeight="80.0" prefWidth="150.0" text="Herpes" />
-      <Button fx:id="rotaBtn" layoutX="306.0" layoutY="273.0" mnemonicParsing="false" onAction="#rotaBtn" prefHeight="80.0" prefWidth="150.0" text="Roto" />
+      <Button fx:id="rotaBtn" layoutX="306.0" layoutY="273.0" mnemonicParsing="false" onAction="#rotaBtn" prefHeight="80.0" prefWidth="150.0" text="Rota" />
       <Button fx:id="astroBtn" layoutX="565.0" layoutY="273.0" mnemonicParsing="false" onAction="#astroBtn" prefHeight="80.0" prefWidth="150.0" text="Astro" />
       <Button fx:id="adenoBtn" layoutX="811.0" layoutY="273.0" mnemonicParsing="false" onAction="#adenoBtn" prefHeight="80.0" prefWidth="150.0" text="Adeno" />
       <Button fx:id="returnBtn" layoutX="80.0" layoutY="196.0" mnemonicParsing="false" onAction="#returnBtnPressed" text="Return" />

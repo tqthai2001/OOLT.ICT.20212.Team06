@@ -6,6 +6,7 @@ import javax.swing.JFrame;
 
 import hust.soict.globalict.Screen.InfectingDetailScreen;
 import hust.soict.globalict.Screen.InfectingScreen;
+import hust.soict.globalict.Screen.MainScreen;
 import hust.soict.globalict.Screen.StructureScreen;
 import hust.soict.globalict.Virus.Virus;
 import javafx.fxml.FXML;
@@ -52,6 +53,7 @@ public class VirusController {
 		});
 		btBack.setOnAction((ActionEvent) -> {
 			jFrame.setVisible(false);
+			new MainScreen(jFrame);
 		});
 		btViewInfectingDetail.setOnAction((ActionEvent) -> {
 			jFrame.setVisible(false);

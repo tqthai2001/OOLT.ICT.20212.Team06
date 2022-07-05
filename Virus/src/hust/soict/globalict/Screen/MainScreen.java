@@ -26,14 +26,14 @@ public class MainScreen extends JFrame {
 	private Adeno adeno;
 	private JFrame jFrame;
 	
-	public MainScreen(HIV hiv, Covid19 covid, Herpes herpes, Rota rota, Astro astro, Adeno adeno, JFrame jFrame) throws HeadlessException {
+	public MainScreen(JFrame jFrame) throws HeadlessException {
 		super();
-		this.hiv = hiv;
-		this.covid = covid;
-		this.herpes = herpes;
-		this.rota = rota;
-		this.astro = astro;
-		this.adeno = adeno;
+//		this.hiv = hiv;
+//		this.covid = covid;
+//		this.herpes = herpes;
+//		this.rota = rota;
+//		this.astro = astro;
+//		this.adeno = adeno;
 		MainScreen mainScreen = this;
 		JFXPanel fxPanel = new JFXPanel();
 		this.add(fxPanel);
@@ -48,7 +48,7 @@ public class MainScreen extends JFrame {
 				// TODO Auto-generated method stub
 				try {
 					FXMLLoader loader = new FXMLLoader(getClass().getResource("MainScreen.fxml"));
-					MainScreenController mainScreenController = new MainScreenController(hiv, covid, herpes, rota, astro, adeno, mainScreen);
+					MainScreenController mainScreenController = new MainScreenController(mainScreen);
 					loader.setController(mainScreenController);
 					Parent root = loader.load();
 					Scene scene = new Scene(root);
