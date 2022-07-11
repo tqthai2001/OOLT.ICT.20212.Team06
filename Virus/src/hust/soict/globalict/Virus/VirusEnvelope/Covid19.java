@@ -4,25 +4,25 @@ import java.util.List;
 
 import hust.soict.globalict.Virus.Element.AcidNucleic;
 import hust.soict.globalict.Virus.Element.Capsid;
-import hust.soict.globalict.Virus.Element.OtherElement;
+import hust.soict.globalict.Virus.Element.DispensableElement;
 import javafx.scene.image.Image;
 
 public class Covid19 extends VirusWithEnvelope {
-	private OtherElement mProtein;
-	private OtherElement eProtein;
-	private OtherElement he;
-	private OtherElement spike;
+	private DispensableElement mProtein;
+	private DispensableElement eProtein;
+	private DispensableElement he;
+	private DispensableElement spike;
 	
-	public OtherElement getmProtein() {
+	public DispensableElement getmProtein() {
 		return mProtein;
 	}
-	public OtherElement geteProtein() {
+	public DispensableElement geteProtein() {
 		return eProtein;
 	}
-	public OtherElement getHe() {
+	public DispensableElement getHe() {
 		return he;
 	}
-	public OtherElement getSpike() {
+	public DispensableElement getSpike() {
 		return spike;
 	}
 	public String getVirusName() {
@@ -30,8 +30,8 @@ public class Covid19 extends VirusWithEnvelope {
 	}
 	
 	public Covid19(List<String> symptoms, List<String> infectingMethod, Image imageOverview, AcidNucleic acidNucleic,
-			Capsid capsid, String envelopeDesc, Image envelopeImage, OtherElement mProtein, OtherElement eProtein,
-			OtherElement he, OtherElement spike) {
+			Capsid capsid, String envelopeDesc, Image envelopeImage, DispensableElement mProtein, DispensableElement eProtein,
+			DispensableElement he, DispensableElement spike) {
 		super(symptoms, infectingMethod, imageOverview, acidNucleic, capsid, envelopeDesc, envelopeImage);
 		this.mProtein = mProtein;
 		this.eProtein = eProtein;

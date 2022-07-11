@@ -33,15 +33,6 @@ public class VirusController {
 		this.virus = virus;
 		this.jFrame = jFrame;
 	}
-	public VirusController(Button btViewInfecting, Button btViewStructure, Button btBack,
-			Button btViewInfectingDetail) {
-		super();
-		this.btViewInfecting = btViewInfecting;
-		this.btViewStructure = btViewStructure;
-		this.btBack = btBack;
-		this.btViewInfectingDetail = btViewInfectingDetail;
-	}
-	
 	public void handleSideBar() {
 		btViewInfecting.setOnAction((ActionEvent) -> {
 			jFrame.setVisible(false);

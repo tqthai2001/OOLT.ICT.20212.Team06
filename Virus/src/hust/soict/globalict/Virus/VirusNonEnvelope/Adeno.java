@@ -4,21 +4,21 @@ import java.util.List;
 
 import hust.soict.globalict.Virus.Element.AcidNucleic;
 import hust.soict.globalict.Virus.Element.Capsid;
-import hust.soict.globalict.Virus.Element.OtherElement;
+import hust.soict.globalict.Virus.Element.DispensableElement;
 import javafx.scene.image.Image;
 
 public class Adeno extends VirusWithoutEnvelope {
-	private OtherElement pentonBase;
-	private OtherElement fiber;
-	private OtherElement knobDomain;
+	private DispensableElement pentonBase;
+	private DispensableElement fiber;
+	private DispensableElement knobDomain;
 	
-	public OtherElement getPentonBase() {
+	public DispensableElement getPentonBase() {
 		return pentonBase;
 	}
-	public OtherElement getFiber() {
+	public DispensableElement getFiber() {
 		return fiber;
 	}
-	public OtherElement getKnobDomain() {
+	public DispensableElement getKnobDomain() {
 		return knobDomain;
 	}
 	public String getVirusName() {
@@ -26,7 +26,7 @@ public class Adeno extends VirusWithoutEnvelope {
 	}
 	
 	public Adeno(List<String> symptoms, List<String> infectingMethod, Image imageOverview, AcidNucleic acidNucleic,
-			Capsid capsid, OtherElement pentonBase, OtherElement fiber, OtherElement knobDomain) {
+			Capsid capsid, DispensableElement pentonBase, DispensableElement fiber, DispensableElement knobDomain) {
 		super(symptoms, infectingMethod, imageOverview, acidNucleic, capsid);
 		this.pentonBase = pentonBase;
 		this.fiber = fiber;

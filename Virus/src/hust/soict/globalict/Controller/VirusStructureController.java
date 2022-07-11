@@ -22,12 +22,6 @@ public class VirusStructureController extends VirusController implements Initial
 	public VirusStructureController(Virus virus, JFrame jFrame) {
 		super(virus, jFrame);
     }
-	
-    public VirusStructureController(Button btViewInfecting, Button btViewStructure, Button btBack,
-			Button btViewInfectingDetail) {
-		super(btViewInfecting, btViewStructure, btBack, btViewInfectingDetail);
-		// TODO Auto-generated constructor stub
-	}
 
 	@FXML
     private Label lbStructure;

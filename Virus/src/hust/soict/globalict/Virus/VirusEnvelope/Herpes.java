@@ -4,29 +4,29 @@ import java.util.List;
 
 import hust.soict.globalict.Virus.Element.AcidNucleic;
 import hust.soict.globalict.Virus.Element.Capsid;
-import hust.soict.globalict.Virus.Element.OtherElement;
+import hust.soict.globalict.Virus.Element.DispensableElement;
 import javafx.scene.image.Image;
 
 public class Herpes extends VirusWithEnvelope {
-	private OtherElement tegument;
-	private OtherElement gB;
-	private OtherElement gC;
-	private OtherElement gD;
-	private OtherElement gHgL;
+	private DispensableElement tegument;
+	private DispensableElement gB;
+	private DispensableElement gC;
+	private DispensableElement gD;
+	private DispensableElement gHgL;
 	
-	public OtherElement getTegument() {
+	public DispensableElement getTegument() {
 		return tegument;
 	}
-	public OtherElement getgB() {
+	public DispensableElement getgB() {
 		return gB;
 	}
-	public OtherElement getgC() {
+	public DispensableElement getgC() {
 		return gC;
 	}
-	public OtherElement getgD() {
+	public DispensableElement getgD() {
 		return gD;
 	}
-	public OtherElement getgHgL() {
+	public DispensableElement getgHgL() {
 		return gHgL;
 	}
 	public String getVirusName() {
@@ -34,8 +34,8 @@ public class Herpes extends VirusWithEnvelope {
 	}
 	
 	public Herpes(List<String> symptoms, List<String> infectingMethod, Image imageOverview, AcidNucleic acidNucleic,
-			Capsid capsid, String envelopeDesc, Image envelopeImage, OtherElement tegument, OtherElement gB,
-			OtherElement gC, OtherElement gD, OtherElement gHgL) {
+			Capsid capsid, String envelopeDesc, Image envelopeImage, DispensableElement tegument, DispensableElement gB,
+			DispensableElement gC, DispensableElement gD, DispensableElement gHgL) {
 		super(symptoms, infectingMethod, imageOverview, acidNucleic, capsid, envelopeDesc, envelopeImage);
 		this.tegument = tegument;
 		this.gB = gB;

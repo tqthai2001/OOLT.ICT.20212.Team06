@@ -4,17 +4,17 @@ import java.util.List;
 
 import hust.soict.globalict.Virus.Element.AcidNucleic;
 import hust.soict.globalict.Virus.Element.Capsid;
-import hust.soict.globalict.Virus.Element.OtherElement;
+import hust.soict.globalict.Virus.Element.DispensableElement;
 import javafx.scene.image.Image;
 
 public class Astro extends VirusWithoutEnvelope {
-	private OtherElement vp25;
-	private OtherElement vp27;
+	private DispensableElement vp25;
+	private DispensableElement vp27;
 	
-	public OtherElement getVp25() {
+	public DispensableElement getVp25() {
 		return vp25;
 	}
-	public OtherElement getVp27() {
+	public DispensableElement getVp27() {
 		return vp27;
 	}
 	public String getVirusName() {
@@ -22,7 +22,7 @@ public class Astro extends VirusWithoutEnvelope {
 	}
 	
 	public Astro(List<String> symptoms, List<String> infectingMethod, Image imageOverview, AcidNucleic acidNucleic,
-			Capsid capsid, OtherElement vp25, OtherElement vp27) {
+			Capsid capsid, DispensableElement vp25, DispensableElement vp27) {
 		super(symptoms, infectingMethod, imageOverview, acidNucleic, capsid);
 		this.vp25 = vp25;
 		this.vp27 = vp27;

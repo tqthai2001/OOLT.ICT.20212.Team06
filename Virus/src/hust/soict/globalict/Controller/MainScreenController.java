@@ -13,7 +13,7 @@ import hust.soict.globalict.Screen.HelpScreen;
 import hust.soict.globalict.Screen.StructureScreen;
 import hust.soict.globalict.Virus.Element.AcidNucleic;
 import hust.soict.globalict.Virus.Element.Capsid;
-import hust.soict.globalict.Virus.Element.OtherElement;
+import hust.soict.globalict.Virus.Element.DispensableElement;
 import hust.soict.globalict.Virus.VirusEnvelope.*;
 import hust.soict.globalict.Virus.VirusNonEnvelope.*;
 import javafx.event.ActionEvent;
@@ -151,15 +151,15 @@ public class MainScreenController implements Initializable {
 			
 			input = new FileInputStream("src/hust/soict/globalict/Assets/HIV/HIV_protease.png");
 			Image HIV_protease_img = new Image(input);
-			OtherElement HIV_protease = new OtherElement("Protease", HIV_protease_img, "HIV protease is responsible for processing of the gag and gag-pol polyproteins during virion maturation");
+			DispensableElement HIV_protease = new DispensableElement("Protease", HIV_protease_img, "HIV protease is responsible for processing of the gag and gag-pol polyproteins during virion maturation");
 			
 			input = new FileInputStream("src/hust/soict/globalict/Assets/HIV/HIV_integrase.png");
 			Image HIV_integrase_img = new Image(input);  
-			OtherElement HIV_integrase = new OtherElement("Integrase", HIV_integrase_img, "HIV integrase is a multidomain enzyme which is required for the integration of viral DNA into the host genome");
+			DispensableElement HIV_integrase = new DispensableElement("Integrase", HIV_integrase_img, "HIV integrase is a multidomain enzyme which is required for the integration of viral DNA into the host genome");
 			
 			input = new FileInputStream("src/hust/soict/globalict/Assets/HIV/HIV_tat.png");
 			Image HIV_tat_img = new Image(input);
-			OtherElement HIV_tat = new OtherElement("Tat", HIV_tat_img, "Tat (HIV) is a regulatory protein that drastically enhances the efficiency of viral transcription. Tat stands for \"Trans-Activator of Transcription\"");
+			DispensableElement HIV_tat = new DispensableElement("Tat", HIV_tat_img, "Tat (HIV) is a regulatory protein that drastically enhances the efficiency of viral transcription. Tat stands for \"Trans-Activator of Transcription\"");
 			
 			input = new FileInputStream("src/hust/soict/globalict/Assets/HIV/HIV_overview.png");
 			Image HIV_overview_img = new Image(input);
@@ -185,19 +185,19 @@ public class MainScreenController implements Initializable {
 			
 			input = new FileInputStream("src/hust/soict/globalict/Assets/Covid19/covid19_eprotein.png");
 			Image covid_eprotein_img = new Image(input);
-			OtherElement covid_eprotein = new OtherElement("E-Protein", covid_eprotein_img, "E-protein is a small integral membrane protein, which together with Matrix/Membrane (M) and Spike(S) proteins, constitute coronaviruses interface to the external environment");
+			DispensableElement covid_eprotein = new DispensableElement("E-Protein", covid_eprotein_img, "E-protein is a small integral membrane protein, which together with Matrix/Membrane (M) and Spike(S) proteins, constitute coronaviruses interface to the external environment");
 			
 			input = new FileInputStream("src/hust/soict/globalict/Assets/Covid19/covid19_Mprotein.png");
 			Image covid_Mprotein_img = new Image(input);  
-			OtherElement covid_Mprotein = new OtherElement("M-Protein", covid_Mprotein_img, "The viral membrane proteins (M-protein) often resemble their host counter-parts in the structure and functions");
+			DispensableElement covid_Mprotein = new DispensableElement("M-Protein", covid_Mprotein_img, "The viral membrane proteins (M-protein) often resemble their host counter-parts in the structure and functions");
 			
 			input = new FileInputStream("src/hust/soict/globalict/Assets/Covid19/covid19_spike.png");
 			Image covid_spike_img = new Image(input);  
-			OtherElement covid_spike = new OtherElement("Spike", covid_spike_img, "Coronavirus spike protein binds to receptors on cell surfaces, and is a target for vaccine development");
+			DispensableElement covid_spike = new DispensableElement("Spike", covid_spike_img, "Coronavirus spike protein binds to receptors on cell surfaces, and is a target for vaccine development");
 			
 			input = new FileInputStream("src/hust/soict/globalict/Assets/Covid19/covid19_he.png");
 			Image covid_he_img = new Image(input);
-			OtherElement covid_he = new OtherElement("He", covid_he_img, "HEs is a glycoprotein that certain enveloped viruses possess and use as an invading mechanism. HEs helps in the attachment and destruction of certain sialic acid receptors that are found on the host cell surface");
+			DispensableElement covid_he = new DispensableElement("He", covid_he_img, "HEs is a glycoprotein that certain enveloped viruses possess and use as an invading mechanism. HEs helps in the attachment and destruction of certain sialic acid receptors that are found on the host cell surface");
 			
 			input = new FileInputStream("src/hust/soict/globalict/Assets/Covid19/covid19_overview.png");
 			Image covid_overview_img = new Image(input);
@@ -223,23 +223,23 @@ public class MainScreenController implements Initializable {
 	
 			input = new FileInputStream("src/hust/soict/globalict/Assets/Herpes/herpes_tegument.jpg");
 			Image herpes_tegument_img = new Image(input);  
-			OtherElement herpes_tegument = new OtherElement("Tegument", herpes_tegument_img, "Herpes tegument includes proteins involved in virion morphogenesis, control of host expression machinery");
+			DispensableElement herpes_tegument = new DispensableElement("Tegument", herpes_tegument_img, "Herpes tegument includes proteins involved in virion morphogenesis, control of host expression machinery");
 	
 			input = new FileInputStream("src/hust/soict/globalict/Assets/Herpes/herpes_gB.jpeg");
 			Image herpes_gB_img = new Image(input);  
-			OtherElement herpes_gB = new OtherElement("gB", herpes_gB_img, "Like all viral fusogens, gB is composed of a large extraviral or ectodomain, many aspects of gB function are both unique and incompletely understood");
+			DispensableElement herpes_gB = new DispensableElement("gB", herpes_gB_img, "Like all viral fusogens, gB is composed of a large extraviral or ectodomain, many aspects of gB function are both unique and incompletely understood");
 	
 			input = new FileInputStream("src/hust/soict/globalict/Assets/Herpes/herpes_gC.jpg");
 			Image herpes_gC_img = new Image(input);  
-			OtherElement herpes_gC = new OtherElement("gC", herpes_gC_img, "Although gC is not essential for most herpesviruses studied thus far, it significantly increases the efficiency of infection by providing an additional binding mechanism5 and helps shield the virus from antibody neutralization");
+			DispensableElement herpes_gC = new DispensableElement("gC", herpes_gC_img, "Although gC is not essential for most herpesviruses studied thus far, it significantly increases the efficiency of infection by providing an additional binding mechanism5 and helps shield the virus from antibody neutralization");
 	
 			input = new FileInputStream("src/hust/soict/globalict/Assets/Herpes/herpes_gD.jpeg");
 			Image herpes_gD_img = new Image(input);  
-			OtherElement herpes_gD = new OtherElement("gD", herpes_gD_img, "Glycoprotein D (gD) is a structural component of the herpes simplex virus (HSV) envelope which is essential for virus entry into host cells");
+			DispensableElement herpes_gD = new DispensableElement("gD", herpes_gD_img, "Glycoprotein D (gD) is a structural component of the herpes simplex virus (HSV) envelope which is essential for virus entry into host cells");
 	
 			input = new FileInputStream("src/hust/soict/globalict/Assets/Herpes/herpes_gHgL.png");
 			Image herpes_gHgL_img = new Image(input);  
-			OtherElement herpes_gHgL = new OtherElement("gHgL", herpes_gHgL_img, "The unique component of herpesvirus fusion machinery, gH/gL is emerging as a complex of multiple functions: a scaffold for presenting receptor-binding proteins, an activator for gB, and a membrane manipulator");
+			DispensableElement herpes_gHgL = new DispensableElement("gHgL", herpes_gHgL_img, "The unique component of herpesvirus fusion machinery, gH/gL is emerging as a complex of multiple functions: a scaffold for presenting receptor-binding proteins, an activator for gB, and a membrane manipulator");
 	
 			input = new FileInputStream("src/hust/soict/globalict/Assets/Herpes/herpes_overview.png");
 			Image herpes_overview = new Image(input);
@@ -265,15 +265,15 @@ public class MainScreenController implements Initializable {
 	
 			input = new FileInputStream("src/hust/soict/globalict/Assets/Rota/rota_vp1.png");
 			Image rota_vp1_img = new Image(input);  
-			OtherElement rota_vp1 = new OtherElement("Vp2", rota_vp1_img, "VP1 is active inside the double-layer particle, each VP1 achieves many rounds of mRNA transcription from its associated genome segment");
+			DispensableElement rota_vp1 = new DispensableElement("Vp2", rota_vp1_img, "VP1 is active inside the double-layer particle, each VP1 achieves many rounds of mRNA transcription from its associated genome segment");
 	
 			input = new FileInputStream("src/hust/soict/globalict/Assets/Rota/rota_vp3.png");
 			Image rota_vp3_img = new Image(input);  
-			OtherElement rota_vp3 = new OtherElement("Vp3", rota_vp3_img, "VP3 was necessary for the viral messenger RNA (mRNA), enabling it to mimic the host’s capped RNA and thus evade immune response");
+			DispensableElement rota_vp3 = new DispensableElement("Vp3", rota_vp3_img, "VP3 was necessary for the viral messenger RNA (mRNA), enabling it to mimic the host’s capped RNA and thus evade immune response");
 	
 			input = new FileInputStream("src/hust/soict/globalict/Assets/Rota/rota_vp4.png");
 			Image rota_vp4_img = new Image(input);  
-			OtherElement rota_vp4 = new OtherElement("Vp4", rota_vp4_img, "VP4 spikes protein that constitute the outer capsid of a complete rotavirus particle have been shown to be independent neutralization antigens");
+			DispensableElement rota_vp4 = new DispensableElement("Vp4", rota_vp4_img, "VP4 spikes protein that constitute the outer capsid of a complete rotavirus particle have been shown to be independent neutralization antigens");
 	
 			input = new FileInputStream("src/hust/soict/globalict/Assets/Rota/rota_overview.png");
 			Image rota_overview = new Image(input);
@@ -294,11 +294,11 @@ public class MainScreenController implements Initializable {
 	
 			input = new FileInputStream("src/hust/soict/globalict/Assets/Astro/astro_vp25-27.png");
 			Image astro_vp25_img = new Image(input);  
-			OtherElement astro_vp25 = new OtherElement("Vp25", astro_vp25_img, "The protein VP25 is released during trypsin activation of astrovirus infectivity. The virus can be equally infectious when carrying abundant amounts of VP25");
+			DispensableElement astro_vp25 = new DispensableElement("Vp25", astro_vp25_img, "The protein VP25 is released during trypsin activation of astrovirus infectivity. The virus can be equally infectious when carrying abundant amounts of VP25");
 	
 			input = new FileInputStream("src/hust/soict/globalict/Assets/Astro/astro_vp25-27.png");
 			Image astro_vp27_img = new Image(input);
-			OtherElement astro_vp27 = new OtherElement("Vp27", astro_vp27_img, "VP27 is a capsid spike protein of astroviruses that not only interacts with the host to define cell tropism and mediate cell entry, but also triggers the host immune response");
+			DispensableElement astro_vp27 = new DispensableElement("Vp27", astro_vp27_img, "VP27 is a capsid spike protein of astroviruses that not only interacts with the host to define cell tropism and mediate cell entry, but also triggers the host immune response");
 	
 			input = new FileInputStream("src/hust/soict/globalict/Assets/Astro/astro_overview.png");
 			Image astro_overview = new Image(input);
@@ -319,15 +319,15 @@ public class MainScreenController implements Initializable {
 	
 			input = new FileInputStream("src/hust/soict/globalict/Assets/Adeno/adeno_penton.png");
 			Image adeno_penton_img = new Image(input);  
-			OtherElement adeno_penton = new OtherElement("Penton", adeno_penton_img, "The adenovirus penton, a noncovalent complex of the pentameric penton base and trimeric fiber proteins, comprises the vertices of the adenovirus capsid and contains all necessary components for viral attachment and internalization");
+			DispensableElement adeno_penton = new DispensableElement("Penton", adeno_penton_img, "The adenovirus penton, a noncovalent complex of the pentameric penton base and trimeric fiber proteins, comprises the vertices of the adenovirus capsid and contains all necessary components for viral attachment and internalization");
 	
 			input = new FileInputStream("src/hust/soict/globalict/Assets/Adeno/adeno_fiber.jpg");
 			Image adeno_fiber_img = new Image(input);  
-			OtherElement adeno_fiber = new OtherElement("Fiber", adeno_fiber_img, "The fiber proteins of all human adenovirus serotypes share a common architecture: an N-terminal tail, a central shaft made of repeating sequences, and a C-terminal globular knob domain");
+			DispensableElement adeno_fiber = new DispensableElement("Fiber", adeno_fiber_img, "The fiber proteins of all human adenovirus serotypes share a common architecture: an N-terminal tail, a central shaft made of repeating sequences, and a C-terminal globular knob domain");
 	
 			input = new FileInputStream("src/hust/soict/globalict/Assets/Adeno/adeno_knob.jpg");
 			Image adeno_knob_img = new Image(input);  
-			OtherElement adeno_knob = new OtherElement("Knob", adeno_knob_img, "The knob is the domain which interacts with the cellular receptor. the trimeric knob is the ligand for attachment to the adenovirus receptor");
+			DispensableElement adeno_knob = new DispensableElement("Knob", adeno_knob_img, "The knob is the domain which interacts with the cellular receptor. the trimeric knob is the ligand for attachment to the adenovirus receptor");
 	
 			input = new FileInputStream("src/hust/soict/globalict/Assets/Adeno/adeno_overview.png");
 			Image adeno_overview = new Image(input);

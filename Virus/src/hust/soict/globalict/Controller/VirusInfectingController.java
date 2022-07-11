@@ -47,12 +47,6 @@ public class VirusInfectingController extends VirusController implements Initial
 		// TODO Auto-generated constructor stub
 	}
 
-	public VirusInfectingController(Button btViewInfecting, Button btViewStructure, Button btBack,
-			Button btViewInfectingDetail) {
-		super(btViewInfecting, btViewStructure, btBack, btViewInfectingDetail);
-		// TODO Auto-generated constructor stub
-	}
-
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		// TODO Auto-generated method stub

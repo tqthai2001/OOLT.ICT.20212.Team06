@@ -5,8 +5,12 @@ import java.util.*;
 import hust.soict.globalict.Virus.Element.AcidNucleic;
 import hust.soict.globalict.Virus.Element.Capsid;
 import hust.soict.globalict.Virus.Element.Element;
+import javafx.scene.control.Button;
+import javafx.scene.control.TextArea;
+import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.HBox;
 
 public class Virus {
 	private int id;
@@ -75,5 +79,10 @@ public class Virus {
 	
 	public String getDetail() {
 		return "ID: " + getId();
+	}
+
+	public void infect(TextArea detailedDescTf, ImageView overviewImg, ImageView envelopeImg, ImageView capsidImg, HBox hbAcid,
+			Button btnReplay) {
+		// TODO Auto-generated method stub
 	}
 }

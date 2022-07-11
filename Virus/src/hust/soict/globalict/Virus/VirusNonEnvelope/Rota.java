@@ -4,21 +4,21 @@ import java.util.List;
 
 import hust.soict.globalict.Virus.Element.AcidNucleic;
 import hust.soict.globalict.Virus.Element.Capsid;
-import hust.soict.globalict.Virus.Element.OtherElement;
+import hust.soict.globalict.Virus.Element.DispensableElement;
 import javafx.scene.image.Image;
 
 public class Rota extends VirusWithoutEnvelope {
-	private OtherElement vp1;
-	private OtherElement vp3;
-	private OtherElement vp4;
+	private DispensableElement vp1;
+	private DispensableElement vp3;
+	private DispensableElement vp4;
 	
-	public OtherElement getVp1() {
+	public DispensableElement getVp1() {
 		return vp1;
 	}
-	public OtherElement getVp3() {
+	public DispensableElement getVp3() {
 		return vp3;
 	}
-	public OtherElement getVp4() {
+	public DispensableElement getVp4() {
 		return vp4;
 	}
 	public String getVirusName() {
@@ -26,7 +26,7 @@ public class Rota extends VirusWithoutEnvelope {
 	}
 	
 	public Rota(List<String> symptoms, List<String> infectingMethod, Image imageOverview, AcidNucleic acidNucleic,
-			Capsid capsid, OtherElement vp1, OtherElement vp3, OtherElement vp4) {
+			Capsid capsid, DispensableElement vp1, DispensableElement vp3, DispensableElement vp4) {
 		super(symptoms, infectingMethod, imageOverview, acidNucleic, capsid);
 		this.vp1 = vp1;
 		this.vp3 = vp3;
