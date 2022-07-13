@@ -2,7 +2,6 @@ package hust.soict.globalict.Virus.VirusEnvelope;
 
 import java.util.List;
 
-import hust.soict.globalict.Virus.Infecting;
 import hust.soict.globalict.Virus.Element.AcidNucleic;
 import hust.soict.globalict.Virus.Element.Capsid;
 import hust.soict.globalict.Virus.Element.DispensableElement;
