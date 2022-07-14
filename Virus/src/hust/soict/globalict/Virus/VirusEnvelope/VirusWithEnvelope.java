@@ -36,7 +36,7 @@ public class VirusWithEnvelope extends Virus {
 	@Override
 	public void infect(TextArea detailedDescTf, ImageView overviewImg, ImageView envelopeImg, ImageView capsidImg, HBox hbAcid, Button btnReplay) {
 		detailedDescTf.setText("The virus attacks the cell starting with attaching the protein envelope to the cell receptors. "
-				+ "Once connected, the fusion of the membranes starts and the viral genetic material is injected into the cell."
+				+ "Once connected, the fusion of the membranes starts and the viral genetic material is injected into the cell. "
 				+ "The capsid separates from the envelope. Then the capsid is dissolved and the"
 				+ " nucleic acid is released. The number of nucleic acids copied depends on the virus type.");
 		detailedDescTf.setWrapText(true);
