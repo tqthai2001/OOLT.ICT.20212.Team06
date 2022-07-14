@@ -109,7 +109,8 @@ public class VirusInfectingController extends VirusController implements Initial
     	fadeOutCell.play();
     	fadeInCell1.play();
     	transition.play();
-    	descTf.setText("Attachment:\nThe virus attaches itself to the host-cell.");
+    	descTf.setText("Attachment:\nThe virus attaches itself by the protein envelope to the host-cell receptors. "
+    			+ "Once connected, the fusion of the membranes starts and the viral genetic material is injected into the cell.");
 	}
 
 	@FXML
