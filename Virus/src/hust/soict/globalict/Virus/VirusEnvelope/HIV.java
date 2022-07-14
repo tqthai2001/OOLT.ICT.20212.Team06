@@ -5,16 +5,7 @@ import java.util.List;
 import hust.soict.globalict.Virus.Element.AcidNucleic;
 import hust.soict.globalict.Virus.Element.Capsid;
 import hust.soict.globalict.Virus.Element.DispensableElement;
-import javafx.animation.FadeTransition;
-import javafx.animation.KeyFrame;
-import javafx.animation.KeyValue;
-import javafx.animation.Timeline;
-import javafx.animation.TranslateTransition;
-import javafx.scene.control.Button;
 import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
-import javafx.scene.layout.HBox;
-import javafx.util.Duration;
 
 public class HIV extends VirusWithEnvelope{
 	private DispensableElement protease;

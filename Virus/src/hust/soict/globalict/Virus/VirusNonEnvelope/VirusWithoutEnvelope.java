@@ -6,13 +6,9 @@ import hust.soict.globalict.Virus.Virus;
 import hust.soict.globalict.Virus.Element.AcidNucleic;
 import hust.soict.globalict.Virus.Element.Capsid;
 import javafx.animation.FadeTransition;
-import javafx.animation.KeyFrame;
-import javafx.animation.KeyValue;
-import javafx.animation.Timeline;
 import javafx.animation.TranslateTransition;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
-import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.HBox;
@@ -47,25 +43,14 @@ public class VirusWithoutEnvelope extends Virus {
 			fadeOutOverview.setFromValue(1);
 			fadeOutOverview.setToValue(0);
 			fadeOutOverview.setOnFinished(e1 -> {
-				Timeline fadeInEnvelope = new Timeline(new KeyFrame(Duration.millis(1500), new KeyValue(envelopeImg.opacityProperty(), 1.0)));
-				fadeInEnvelope.play();
-				Timeline fadeInCapsid = new Timeline(new KeyFrame(Duration.millis(1500), new KeyValue(capsidImg.opacityProperty(), 1.0)));
-				fadeInCapsid.setOnFinished(e2 -> {
-					FadeTransition fadeInHBoxAcid = new FadeTransition(Duration.millis(1500), hbAcid);
-					fadeInHBoxAcid.setDelay(Duration.millis(100));
-					fadeInHBoxAcid.setFromValue(0);
-			        fadeInHBoxAcid.setToValue(1);
-			        fadeInHBoxAcid.setOnFinished(e3 -> {
-			        	btnReplay.setVisible(true);
-			        });
-					fadeInHBoxAcid.play();
-					FadeTransition fadeOutCapsid = new FadeTransition(Duration.millis(1500), capsidImg);
-					fadeOutCapsid.setDelay(Duration.millis(100));
-			        fadeOutCapsid.setFromValue(1);
-			        fadeOutCapsid.setToValue(0);
-			        fadeOutCapsid.play();
-				});
-				fadeInCapsid.play();
+				FadeTransition fadeInHBoxAcid = new FadeTransition(Duration.millis(1500), hbAcid);
+				fadeInHBoxAcid.setDelay(Duration.millis(100));
+				fadeInHBoxAcid.setFromValue(0);
+		        fadeInHBoxAcid.setToValue(1);
+		        fadeInHBoxAcid.setOnFinished(e3 -> {
+		        	btnReplay.setVisible(true);
+		        });
+				fadeInHBoxAcid.play();
 			});
 			fadeOutOverview.play();
 		});
