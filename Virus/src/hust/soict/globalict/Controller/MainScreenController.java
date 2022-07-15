@@ -277,11 +277,13 @@ public class MainScreenController implements Initializable {
 	
 			input = new FileInputStream("src/hust/soict/globalict/Assets/Rota/rota_overview.png");
 			Image rota_overview = new Image(input);
+			input = new FileInputStream("src/hust/soict/globalict/Assets/Rota/rotaCovered.png");
+			Image rota_covered = new Image(input);
 			
 			List<String> rota_infect = Arrays.asList("Fecal-oral route");
 			List<String> rota_symptoms = Arrays.asList("Vomiting", "Diarrhoea", "Fever", "Dry mouth");
 	
-			rota = new Rota(rota_symptoms, rota_infect, rota_overview, rota_acid, rota_capsid, rota_vp1, rota_vp3, rota_vp4);
+			rota = new Rota(rota_symptoms, rota_infect, rota_overview, rota_covered, rota_acid, rota_capsid, rota_vp1, rota_vp3, rota_vp4);
 			
 	//		------------------------------ Astro ------------------------------
 			input = new FileInputStream("src/hust/soict/globalict/Assets/Astro/astro_acid.png");
@@ -302,11 +304,13 @@ public class MainScreenController implements Initializable {
 	
 			input = new FileInputStream("src/hust/soict/globalict/Assets/Astro/astro_overview.png");
 			Image astro_overview = new Image(input);
+			input = new FileInputStream("src/hust/soict/globalict/Assets/Astro/astroCovered.png");
+			Image astro_covered = new Image(input);
 			
 			List<String> astro_infect = Arrays.asList("Water", "Hand-touching", "Oral");
 			List<String> astro_symptoms = Arrays.asList("Diarrhoea", "Vomiting", "Fever", "Abdominal pain");
 			
-			astro = new Astro(astro_symptoms, astro_infect, astro_overview, astro_acid, astro_capsid, astro_vp25, astro_vp27);
+			astro = new Astro(astro_symptoms, astro_infect, astro_overview, astro_covered, astro_acid, astro_capsid, astro_vp25, astro_vp27);
 			
 	//		------------------------------ Adeno ------------------------------		
 			input = new FileInputStream("src/hust/soict/globalict/Assets/Adeno/adeno_acid.png");
@@ -331,11 +335,13 @@ public class MainScreenController implements Initializable {
 	
 			input = new FileInputStream("src/hust/soict/globalict/Assets/Adeno/adeno_overview.png");
 			Image adeno_overview = new Image(input);
+			input = new FileInputStream("src/hust/soict/globalict/Assets/Adeno/adenoCovered.png");
+			Image adeno_covered = new Image(input);
 			
 			List<String> adeno_infect = Arrays.asList("Water", "Hand-touching", "Oral", "Body fluids", "Air");
 			List<String> adeno_symptoms = Arrays.asList("Runny nose", "Sore throat", "Fever", "Severe cough", "Headache", "Pink eye");
 			
-			adeno = new Adeno(adeno_symptoms, adeno_infect, adeno_overview, adeno_acid, adeno_capsid, adeno_penton, adeno_fiber, adeno_knob);
+			adeno = new Adeno(adeno_symptoms, adeno_infect, adeno_overview, adeno_covered, adeno_acid, adeno_capsid, adeno_penton, adeno_fiber, adeno_knob);
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

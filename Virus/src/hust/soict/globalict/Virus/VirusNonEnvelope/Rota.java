@@ -25,9 +25,9 @@ public class Rota extends VirusWithoutEnvelope {
 		return this.getClass().getSimpleName();
 	}
 	
-	public Rota(List<String> symptoms, List<String> infectingMethod, Image imageOverview, AcidNucleic acidNucleic,
+	public Rota(List<String> symptoms, List<String> infectingMethod, Image imageOverview, Image virusCoveredImg, AcidNucleic acidNucleic,
 			Capsid capsid, DispensableElement vp1, DispensableElement vp3, DispensableElement vp4) {
-		super(symptoms, infectingMethod, imageOverview, acidNucleic, capsid);
+		super(symptoms, infectingMethod, imageOverview, virusCoveredImg, acidNucleic, capsid);
 		this.vp1 = vp1;
 		this.vp3 = vp3;
 		this.vp4 = vp4;

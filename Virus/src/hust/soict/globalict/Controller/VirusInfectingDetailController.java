@@ -19,7 +19,7 @@ import javafx.scene.layout.HBox;
 
 public class VirusInfectingDetailController extends VirusController implements Initializable {
 	@FXML
-    private ImageView capsid, envelope, hostcell, overview;
+    private ImageView capsid, envelope, hostcell, overview, vesicleImg;
     @FXML
     private AnchorPane apMain;
     @FXML
@@ -38,6 +38,7 @@ public class VirusInfectingDetailController extends VirusController implements I
 		envelope.setOpacity(0);
 		hbAcid.setOpacity(0);
 		capsid.setOpacity(0);
+		vesicleImg.setOpacity(0);
 		btnPlay.setVisible(true);
 		btnReplay.setVisible(false);
 		handleSideBar();
@@ -54,7 +55,7 @@ public class VirusInfectingDetailController extends VirusController implements I
     void btnPlayPressed(ActionEvent event) {
     	btnPlay.setVisible(false);
     	//processInfection();
-    	virus.infect(detailedDescTf, overview, envelope, capsid, hbAcid, btnReplay);
+    	virus.infect(detailedDescTf, overview, envelope, capsid, vesicleImg, hbAcid, btnReplay);
     }
 
     @FXML
@@ -63,10 +64,11 @@ public class VirusInfectingDetailController extends VirusController implements I
     	envelope.setOpacity(0);
 		hbAcid.setOpacity(0);
 		capsid.setOpacity(0);
+		vesicleImg.setOpacity(0);
 		overview.setOpacity(1);
 		overview.setTranslateX(0);
 		overview.setTranslateY(0);
-		virus.infect(detailedDescTf, overview, envelope, capsid, hbAcid, btnReplay);
+    	virus.infect(detailedDescTf, overview, envelope, capsid, vesicleImg, hbAcid, btnReplay);
     }
 
 	public VirusInfectingDetailController(Virus virus, JFrame jFrame) throws HeadlessException {
