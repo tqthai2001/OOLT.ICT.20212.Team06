@@ -34,7 +34,7 @@ public class VirusWithEnvelope extends Virus {
 	}
 	
 	@Override
-	public void infect(TextArea detailedDescTf, ImageView overviewImg, ImageView envelopeImg, ImageView capsidImg, HBox hbAcid, Button btnReplay) {
+	public void infect(TextArea detailedDescTf, ImageView overviewImg, ImageView envelopeImg, ImageView capsidImg, ImageView vesicleImg, HBox hbAcid, Button btnReplay) {
 		detailedDescTf.setText("The virus attacks the cell. The capsid separates from the envelope. Then the capsid is dissolved and the"
 				+ " nucleic acid remains. The number of nucleic acids copied depends on the virus type.");
 		detailedDescTf.setWrapText(true);

@@ -21,9 +21,9 @@ public class Astro extends VirusWithoutEnvelope {
 		return this.getClass().getSimpleName();
 	}
 	
-	public Astro(List<String> symptoms, List<String> infectingMethod, Image imageOverview, AcidNucleic acidNucleic,
+	public Astro(List<String> symptoms, List<String> infectingMethod, Image imageOverview, Image virusCoveredImg, AcidNucleic acidNucleic,
 			Capsid capsid, DispensableElement vp25, DispensableElement vp27) {
-		super(symptoms, infectingMethod, imageOverview, acidNucleic, capsid);
+		super(symptoms, infectingMethod, imageOverview, virusCoveredImg, acidNucleic, capsid);
 		this.vp25 = vp25;
 		this.vp27 = vp27;
 		this.addElement(vp25, vp27);

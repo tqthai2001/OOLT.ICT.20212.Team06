@@ -25,9 +25,9 @@ public class Adeno extends VirusWithoutEnvelope {
 		return this.getClass().getSimpleName();
 	}
 	
-	public Adeno(List<String> symptoms, List<String> infectingMethod, Image imageOverview, AcidNucleic acidNucleic,
+	public Adeno(List<String> symptoms, List<String> infectingMethod, Image imageOverview, Image virusCoveredImg, AcidNucleic acidNucleic,
 			Capsid capsid, DispensableElement pentonBase, DispensableElement fiber, DispensableElement knobDomain) {
-		super(symptoms, infectingMethod, imageOverview, acidNucleic, capsid);
+		super(symptoms, infectingMethod, imageOverview, virusCoveredImg, acidNucleic, capsid);
 		this.pentonBase = pentonBase;
 		this.fiber = fiber;
 		this.knobDomain = knobDomain;

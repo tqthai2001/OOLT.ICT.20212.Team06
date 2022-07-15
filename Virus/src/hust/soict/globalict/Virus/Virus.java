@@ -80,7 +80,7 @@ public class Virus {
 		return "ID: " + getId();
 	}
 
-	public void infect(TextArea detailedDescTf, ImageView overviewImg, ImageView envelopeImg, ImageView capsidImg, HBox hbAcid,
+	public void infect(TextArea detailedDescTf, ImageView overviewImg, ImageView envelopeImg, ImageView capsidImg, ImageView vesicleImg, HBox hbAcid,
 			Button btnReplay) {
 		// TODO Auto-generated method stub
 	}
