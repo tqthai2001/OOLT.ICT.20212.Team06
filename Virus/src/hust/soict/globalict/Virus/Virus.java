@@ -2,6 +2,7 @@ package hust.soict.globalict.Virus;
 
 import java.util.*;
 
+import hust.soict.globalict.Controller.VirusStructureController;
 import hust.soict.globalict.Virus.Element.AcidNucleic;
 import hust.soict.globalict.Virus.Element.Capsid;
 import hust.soict.globalict.Virus.Element.Element;
@@ -78,6 +79,19 @@ public class Virus {
 	
 	public String getDetail() {
 		return "ID: " + getId();
+	}
+	
+	public void getStructure(ImageView imgStructure, TextArea taDesc, HBox hbElement) {
+		for (Element element : this.getElements()) {	
+	    	Button b = new Button(element.getNameOfElement());
+	    	hbElement.getChildren().add(b);
+	    	b.setOnAction((ActionEvent)->{
+	    		imgStructure.setImage(element.getImage());
+	    		VirusStructureController.centerImage(imgStructure);
+	    		taDesc.setWrapText(true);
+	    	    taDesc.setText(element.getDesc());
+	        });
+	    }
 	}
 
 	public void infect(TextArea detailedDescTf, ImageView overviewImg, ImageView envelopeImg, ImageView capsidImg, ImageView vesicleImg, HBox hbAcid,
