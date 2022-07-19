@@ -2,6 +2,7 @@ package hust.soict.globalict.Virus;
 
 import java.util.*;
 
+import hust.soict.globalict.Controller.VirusStructureController;
 import hust.soict.globalict.Virus.Element.AcidNucleic;
 import hust.soict.globalict.Virus.Element.Capsid;
 import hust.soict.globalict.Virus.Element.Element;
@@ -11,7 +12,7 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.HBox;
 
-public class Virus {
+public abstract class Virus {
 	private int id;
 	private static int nbVirus = 0;
 	private List<String> symptoms = new ArrayList<String>();
@@ -80,8 +81,19 @@ public class Virus {
 		return "ID: " + getId();
 	}
 
-	public void infect(TextArea detailedDescTf, ImageView overviewImg, ImageView envelopeImg, ImageView capsidImg, HBox hbAcid,
-			Button btnReplay) {
-		// TODO Auto-generated method stub
+	public abstract void infect(TextArea detailedDescTf, ImageView overviewImg, ImageView envelopeImg, ImageView capsidImg, HBox hbAcid,
+			Button btnReplay);
+	
+	public void getStructure(ImageView imgStructure, TextArea taDesc, HBox hbElement) {
+		for (Element element : this.getElements()) {	
+	    	Button b = new Button(element.getNameOfElement());
+	    	hbElement.getChildren().add(b);
+	    	b.setOnAction((ActionEvent)->{
+	    		imgStructure.setImage(element.getImage());
+	    		VirusStructureController.centerImage(imgStructure);
+	    		taDesc.setWrapText(true);
+	    	    taDesc.setText(element.getDesc());
+	        });
+	    }
 	}
 }

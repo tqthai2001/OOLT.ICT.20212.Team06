@@ -1,7 +1,6 @@
 package hust.soict.globalict.Controller;
 
 import hust.soict.globalict.Virus.*;
-import hust.soict.globalict.Virus.Element.Element;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
@@ -51,22 +50,13 @@ public class VirusStructureController extends VirusController implements Initial
     public void initialize(URL url, ResourceBundle resourceBundle) {
     	lbStructure.setText("Structure of " + virus.getVirusName());
     	imgStructure.setImage(virus.getImageOverview());
-    	centerImage();
+    	centerImage(imgStructure);
     	taDesc.setText(virus.getDetail());
-	    for (Element element : virus.getElements()) {	
-	    	Button b = new Button(element.getNameOfElement());
-	    	hbElement.getChildren().add(b);
-	    	b.setOnAction((ActionEvent)->{
-	    		imgStructure.setImage(element.getImage());
-	    		centerImage();
-	    		taDesc.setWrapText(true);
-	    	    taDesc.setText(element.getDesc());
-	        });
-	    }
+    	virus.getStructure(imgStructure, taDesc, hbElement);
 	    handleSideBar();
     }
     
-    private void centerImage() {
+    public static void centerImage(ImageView imgStructure) {
         Image img = imgStructure.getImage();
         if (img != null) {
             double w = 0;

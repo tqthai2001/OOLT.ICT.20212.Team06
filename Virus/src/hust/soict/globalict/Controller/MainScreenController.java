@@ -11,6 +11,7 @@ import javax.swing.JFrame;
 
 import hust.soict.globalict.Screen.HelpScreen;
 import hust.soict.globalict.Screen.StructureScreen;
+import hust.soict.globalict.Virus.Virus;
 import hust.soict.globalict.Virus.Element.AcidNucleic;
 import hust.soict.globalict.Virus.Element.Capsid;
 import hust.soict.globalict.Virus.Element.DispensableElement;
@@ -26,12 +27,12 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ButtonType;
 
 public class MainScreenController implements Initializable {
-	private HIV hiv;
-	private Covid19 covid;
-	private Herpes herpes;
-	private Rota rota;
-	private Astro astro;
-	private Adeno adeno;
+	private Virus hiv;
+	private Virus covid;
+	private Virus herpes;
+	private Virus rota;
+	private Virus astro;
+	private Virus adeno;
 	private JFrame jFrame;
 
 	public MainScreenController(JFrame jFrame) {
